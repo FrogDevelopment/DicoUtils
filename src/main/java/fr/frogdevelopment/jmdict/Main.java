@@ -1,5 +1,7 @@
 package fr.frogdevelopment.jmdict;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.io.File;
 import java.net.URL;
 
@@ -16,11 +18,16 @@ public class Main {
 
             parser.parse(file);
 
+            ObjectMapper mapper = new ObjectMapper();
+
+            mapper.writeValue(new File("d:/Temp/lexicon.json"), parser.getLexicon());
+            mapper.writeValue(new File("d:/Temp/entries.json"), parser.getEntries());
+
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        System.out.println("nb entries : " + parser.ENTRIES.size() + " in " + (System.currentTimeMillis() - start) + "ms");
+        System.out.println("nb entries : " + parser.getEntries().size() + " in " + (System.currentTimeMillis() - start) + "ms");
     }
 
 }

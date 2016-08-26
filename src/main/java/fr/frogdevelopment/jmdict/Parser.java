@@ -7,13 +7,15 @@ import org.apache.commons.lang3.StringUtils;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Parser {
 
-//    private static final Pattern ENTITY_PATTERN = Pattern.compile("<!ENTITY (?<code>.*) \"(?<label>.*)\">");
+    private static final Pattern ENTITY_PATTERN = Pattern.compile("<!ENTITY (?<code>.*) \"(?<label>.*)\">");
 
     private static final String JMDICT_START = "<JMdict>";
 
@@ -40,8 +42,8 @@ public class Parser {
     private static final Pattern GLOSS_PATTERN = Pattern.compile("^<gloss( xml:lang=\"(?<lang>\\w{3})\")?>(?<value>.*)(.*)</gloss>$");
 
     //
-//    private final Map<String, String> LEXICON = new HashMap<>();
-    final List<Entry> ENTRIES = new ArrayList<>();
+    private final Map<String, String> LEXICON = new HashMap<>();
+    private final List<Entry> ENTRIES = new ArrayList<>();
 
     private final String language;
     private final boolean isDefaultLanguage;
@@ -56,6 +58,14 @@ public class Parser {
         }
     }
 
+    public Map<String, String> getLexicon() {
+        return LEXICON;
+    }
+
+    public List<Entry> getEntries() {
+        return ENTRIES;
+    }
+
     public void parse(File file) throws IOException {
         LineIterator it = FileUtils.lineIterator(file, "UTF-8");
         try {
@@ -64,11 +74,11 @@ public class Parser {
 
                 if (JMDICT_START.equals(line)) {
                     fetchEntries(it);
-//                } else {
-//                    Matcher matcher = ENTITY_PATTERN.matcher(line);
-//                    if (matcher.matches()) {
-//                        LEXICON.put(matcher.group("code"), matcher.group("label"));
-//                    }
+                } else {
+                    Matcher matcher = ENTITY_PATTERN.matcher(line);
+                    if (matcher.matches()) {
+                        LEXICON.put(matcher.group("code"), matcher.group("label"));
+                    }
                 }
             }
         } finally {
@@ -109,6 +119,10 @@ public class Parser {
                 default:
                     // nothing to do, go to next line
                     break;
+            }
+
+            if (ENTRIES.size() == 50) {
+                break;
             }
         }
     }

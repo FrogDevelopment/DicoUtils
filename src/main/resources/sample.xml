@@ -1,0 +1,1615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JMdict>
+    <entry>
+        <ent_seq>1000000</ent_seq>
+        <r_ele>
+            <reb>ヽ</reb>
+        </r_ele>
+        <r_ele>
+            <reb>くりかえし</reb>
+        </r_ele>
+        <sense>
+            <pos>&n;</pos>
+            <gloss>repetition mark in katakana</gloss>
+            <gloss xml:lang="ita">simbolo di ripetizione in katakana</gloss>
+        </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000010</ent_seq>
+    <r_ele>
+        <reb>ヾ</reb>
+    </r_ele>
+    <r_ele>
+        <reb>くりかえし</reb>
+    </r_ele>
+    <sense>
+        <pos>&n;</pos>
+        <gloss>voiced repetition mark in katakana</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000020</ent_seq>
+    <r_ele>
+        <reb>ゝ</reb>
+    </r_ele>
+    <r_ele>
+        <reb>くりかえし</reb>
+    </r_ele>
+    <sense>
+        <pos>&n;</pos>
+        <gloss>repetition mark in hiragana</gloss>
+        <gloss xml:lang="ita">(a fine frase, gergo femminile) esprime emozione o ammirazione</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000030</ent_seq>
+    <r_ele>
+        <reb>ゞ</reb>
+    </r_ele>
+    <r_ele>
+        <reb>くりかえし</reb>
+    </r_ele>
+    <sense>
+        <pos>&n;</pos>
+        <gloss>voiced repetition mark in hiragana</gloss>
+        <gloss xml:lang="ita">segno di ripetizione sonorizzata del precedente hiragana</gloss>
+        <gloss xml:lang="ita">kurikaeshi</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000040</ent_seq>
+    <k_ele>
+        <keb>〃</keb>
+    </k_ele>
+    <r_ele>
+        <reb>おなじ</reb>
+    </r_ele>
+    <r_ele>
+        <reb>おなじく</reb>
+    </r_ele>
+    <sense>
+        <pos>&n;</pos>
+        <gloss>ditto mark</gloss>
+        <gloss xml:lang="ger">Wiederholungszeichen in Tabellen</gloss>
+        <gloss xml:lang="ita">simbolo tipografico per 'come sopra'</gloss>
+        <gloss xml:lang="rus">знак "то же самое"</gloss>
+        <gloss xml:lang="spa">signo ídem</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000050</ent_seq>
+    <k_ele>
+        <keb>仝</keb>
+    </k_ele>
+    <r_ele>
+        <reb>どうじょう</reb>
+    </r_ele>
+    <sense>
+        <pos>&n;</pos>
+        <gloss>"as above" mark</gloss>
+        <gloss xml:lang="ger">siehe oben (Abk.)</gloss>
+        <gloss xml:lang="ita">come sopra</gloss>
+        <gloss xml:lang="spa">signo "en lo alto"</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000060</ent_seq>
+    <k_ele>
+        <keb>々</keb>
+    </k_ele>
+    <r_ele>
+        <reb>くりかえし</reb>
+    </r_ele>
+    <r_ele>
+        <reb>おなじ</reb>
+    </r_ele>
+    <r_ele>
+        <reb>おなじく</reb>
+    </r_ele>
+    <r_ele>
+        <reb>のま</reb>
+    </r_ele>
+    <r_ele>
+        <reb>どうのじてん</reb>
+    </r_ele>
+    <sense>
+        <pos>&n;</pos>
+        <gloss>repetition of kanji (sometimes voiced)</gloss>
+        <gloss xml:lang="dut">teken dat herhaling van de voorafgaande kanji aanduidt; ook dō no jiten 同の字点 genoemd</gloss>
+        <gloss xml:lang="ger">Wiederholungszeichen für Kanji (Laut wird durch Wiederholung manchmal stimmhaft)</gloss>
+        <gloss xml:lang="ita">ripetizione del kanji (a volte con consonante sonora)</gloss>
+        <gloss xml:lang="spa">carácter de repetición de kanji (algunas veces sonoro)</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000080</ent_seq>
+    <k_ele>
+        <keb>漢数字ゼロ</keb>
+    </k_ele>
+    <r_ele>
+        <reb>かんすうじゼロ</reb>
+    </r_ele>
+    <sense>
+        <pos>&n;</pos>
+        <xref>○・まる・1</xref>
+        <xref>漢数字</xref>
+        <gloss>"kanji" zero</gloss>
+        <gloss xml:lang="ita">kanji zero 01</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000090</ent_seq>
+    <k_ele>
+        <keb>○</keb>
+    </k_ele>
+    <k_ele>
+        <keb>〇</keb>
+    </k_ele>
+    <r_ele>
+        <reb>まる</reb>
+    </r_ele>
+    <sense>
+        <pos>&n;</pos>
+        <xref>丸・まる・1</xref>
+        <gloss>circle (sometimes used for zero)</gloss>
+        <gloss xml:lang="ger">(1) (m) Kreis</gloss>
+        <gloss xml:lang="ger">(2) (Markierung für) richtig</gloss>
+        <gloss xml:lang="ger">(f) Richtigkeit</gloss>
+        <gloss xml:lang="ger">(n) Maru (je nach Font gibt es verschiedene Versionen des Kreises)</gloss>
+        <gloss xml:lang="hun">karika</gloss>
+        <gloss xml:lang="hun">kerület</gloss>
+        <gloss xml:lang="hun">körpálya</gloss>
+        <gloss xml:lang="hun">körzet</gloss>
+        <gloss xml:lang="ita">cerchio (usato alle volte come zero)</gloss>
+        <gloss xml:lang="ita">'giusto' (quando si sta dando una valutazione)</gloss>
+        <gloss xml:lang="ita">punto di chiusura frase</gloss>
+        <gloss xml:lang="rus">круг</gloss>
+        <gloss xml:lang="rus">ноль</gloss>
+        <gloss xml:lang="spa">(1) círculo (a veces usado como cero)</gloss>
+        <gloss xml:lang="spa">(2) 'correcto' (al calificar)</gloss>
+    </sense>
+    <sense>
+        <xref>二重丸・にじゅうまる</xref>
+        <ant>×・ばつ・1</ant>
+        <gloss>'correct' (when marking)</gloss>
+    </sense>
+    <sense>
+        <xref>〇〇・まるまる・1</xref>
+        <gloss>symbol used as a placeholder (either because a number of other words could be used in that position, or because of censorship)</gloss>
+    </sense>
+    <sense>
+        <xref>句点</xref>
+        <gloss>period</gloss>
+        <gloss>full stop</gloss>
+    </sense>
+    <sense>
+        <xref>半濁点</xref>
+        <gloss>maru mark</gloss>
+        <gloss>semivoiced sound</gloss>
+        <gloss>p-sound</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000100</ent_seq>
+    <k_ele>
+        <keb>ＡＢＣ順</keb>
+    </k_ele>
+    <r_ele>
+        <reb>エービーシーじゅん</reb>
+    </r_ele>
+    <sense>
+        <pos>&n;</pos>
+        <gloss>alphabetical order</gloss>
+        <gloss xml:lang="spa">orden alfabético</gloss>
+        <gloss xml:lang="swe">bokstavsföljd</gloss>
+        <gloss xml:lang="swe">bokstavsordning</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000110</ent_seq>
+    <k_ele>
+        <keb>ＣＤプレーヤー</keb>
+        <ke_pri>spec1</ke_pri>
+    </k_ele>
+    <k_ele>
+        <keb>ＣＤプレイヤー</keb>
+    </k_ele>
+    <r_ele>
+        <reb>シーディープレーヤー</reb>
+        <re_restr>ＣＤプレーヤー</re_restr>
+        <re_pri>spec1</re_pri>
+    </r_ele>
+    <r_ele>
+        <reb>シーディープレイヤー</reb>
+        <re_restr>ＣＤプレイヤー</re_restr>
+    </r_ele>
+    <sense>
+        <pos>&n;</pos>
+        <gloss>CD player</gloss>
+        <gloss xml:lang="ita">lettore CD (en: CD player)</gloss>
+        <gloss xml:lang="rus">CD плеер</gloss>
+        <gloss xml:lang="rus">проигрыватель компакт-дисков</gloss>
+        <gloss xml:lang="spa">reproductor de CD (eng: CD player)</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000130</ent_seq>
+    <k_ele>
+        <keb>Ｎ響</keb>
+    </k_ele>
+    <r_ele>
+        <reb>エヌきょう</reb>
+    </r_ele>
+    <sense>
+        <pos>&n;</pos>
+        <misc>&abbr;</misc>
+        <gloss>NHK Symphony Orchestra</gloss>
+        <gloss xml:lang="spa">NHK orquesta sinfónica</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000140</ent_seq>
+    <k_ele>
+        <keb>Ｏバック</keb>
+    </k_ele>
+    <r_ele>
+        <reb>オーバック</reb>
+    </r_ele>
+    <sense>
+        <pos>&n;</pos>
+        <gloss>O-back</gloss>
+        <gloss>skirt with peek-a-boo hole in rump</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000150</ent_seq>
+    <k_ele>
+        <keb>ＲＳ２３２ケーブル</keb>
+    </k_ele>
+    <r_ele>
+        <reb>アールエスにさんにケーブル</reb>
+    </r_ele>
+    <sense>
+        <pos>&n;</pos>
+        <gloss>rs232 cable</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000160</ent_seq>
+    <k_ele>
+        <keb>Ｔシャツ</keb>
+    </k_ele>
+    <r_ele>
+        <reb>ティーシャツ</reb>
+        <re_pri>spec1</re_pri>
+    </r_ele>
+    <sense>
+        <pos>&n;</pos>
+        <gloss>T-shirt</gloss>
+        <gloss xml:lang="dut">T-shirt</gloss>
+        <gloss xml:lang="dut">T-truitje</gloss>
+        <gloss xml:lang="ger">(n) T-Shirt</gloss>
+        <gloss xml:lang="ita">T-shirt</gloss>
+        <gloss xml:lang="spa">camiseta</gloss>
+        <gloss xml:lang="spa">(T-shirt)</gloss>
+        <gloss xml:lang="swe">T-tröja</gloss>
+        <gloss xml:lang="swe">T-shirt</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000170</ent_seq>
+    <k_ele>
+        <keb>Ｔバック</keb>
+        <ke_pri>spec1</ke_pri>
+    </k_ele>
+    <r_ele>
+        <reb>ティーバック</reb>
+        <re_pri>spec1</re_pri>
+    </r_ele>
+    <sense>
+        <pos>&n;</pos>
+        <gloss>T-back</gloss>
+        <gloss>bikini thong</gloss>
+        <gloss xml:lang="ita">perizoma (en: T-back)</gloss>
+        <gloss xml:lang="ita">perizoma di un bikini</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000200</ent_seq>
+    <k_ele>
+        <keb>あうんの呼吸</keb>
+    </k_ele>
+    <k_ele>
+        <keb>阿吽の呼吸</keb>
+    </k_ele>
+    <r_ele>
+        <reb>あうんのこきゅう</reb>
+    </r_ele>
+    <sense>
+        <pos>&exp;</pos>
+        <pos>&n;</pos>
+        <gloss>the harmonizing, mentally and physically, of two parties engaged in an activity</gloss>
+        <gloss>singing from the same hymn-sheet</gloss>
+        <gloss>dancing to the same beat</gloss>
+        <gloss xml:lang="dut">(1) uitademing en inademing</gloss>
+        <gloss xml:lang="dut">(2) {sumō-jargon} het onderling synchroniseren van de concentratie</gloss>
+        <gloss xml:lang="ger">die geistige und körperliche (f) Harmonisierung bei einer gemeinsamen Aktivität</gloss>
+        <gloss xml:lang="ita">l'armonizzarsi, mentale e fisico, di due parti impegnate in un'attività</gloss>
+        <gloss xml:lang="spa">la armonización mental y físicamente de dos partes entablados en una actividad</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000210</ent_seq>
+    <r_ele>
+        <reb>あおば</reb>
+    </r_ele>
+    <sense>
+        <pos>&n;</pos>
+        <xref>やまびこ</xref>
+        <misc>&obs;</misc>
+        <gloss>(former) regular (stops at every station) Tohoku-line Shinkansen</gloss>
+        <gloss xml:lang="ger">(m) Aoba-Shinkansen (hält an allen Stationen der Tōhoku-Linie)</gloss>
+        <gloss xml:lang="spa">(antiguo) Shinkansen regular (se detiene en todas las estaciones) de la línea Touhoku</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000220</ent_seq>
+    <k_ele>
+        <keb>明白</keb>
+        <ke_pri>ichi1</ke_pri>
+        <ke_pri>news1</ke_pri>
+        <ke_pri>nf10</ke_pri>
+    </k_ele>
+    <r_ele>
+        <reb>めいはく</reb>
+        <re_pri>ichi1</re_pri>
+        <re_pri>news1</re_pri>
+        <re_pri>nf10</re_pri>
+    </r_ele>
+    <sense>
+        <pos>&adj-na;</pos>
+        <gloss>obvious</gloss>
+        <gloss>clear</gloss>
+        <gloss>plain</gloss>
+        <gloss>evident</gloss>
+        <gloss>apparent</gloss>
+        <gloss>explicit</gloss>
+        <gloss>overt</gloss>
+        <gloss xml:lang="dut">duidelijk</gloss>
+        <gloss xml:lang="dut">klaar</gloss>
+        <gloss xml:lang="dut">zonneklaar</gloss>
+        <gloss xml:lang="dut">niet mis te verstaan</gloss>
+        <gloss xml:lang="dut">aanwijsbaar</gloss>
+        <gloss xml:lang="dut">ondubbelzinnig</gloss>
+        <gloss xml:lang="dut">onmiskenbaar</gloss>
+        <gloss xml:lang="dut">kennelijk</gloss>
+        <gloss xml:lang="dut">apert</gloss>
+        <gloss xml:lang="dut">evident</gloss>
+        <gloss xml:lang="dut">klaarblijkelijk</gloss>
+        <gloss xml:lang="fre">évident</gloss>
+        <gloss xml:lang="fre">clair</gloss>
+        <gloss xml:lang="ger">klar</gloss>
+        <gloss xml:lang="ger">deutlich</gloss>
+        <gloss xml:lang="ger">offensichtlich</gloss>
+        <gloss xml:lang="ger">unbestritten</gloss>
+        <gloss xml:lang="ger">unverkennbar</gloss>
+        <gloss xml:lang="ger">klar</gloss>
+        <gloss xml:lang="ger">deutlich</gloss>
+        <gloss xml:lang="ger">offensichtlich</gloss>
+        <gloss xml:lang="ger">augenscheinlich</gloss>
+        <gloss xml:lang="ger">einleuchtend</gloss>
+        <gloss xml:lang="ger">unmissverständlich</gloss>
+        <gloss xml:lang="ger">unbestritten</gloss>
+        <gloss xml:lang="ger">unverkennbar</gloss>
+        <gloss xml:lang="ger">klar</gloss>
+        <gloss xml:lang="ger">deutlich</gloss>
+        <gloss xml:lang="ger">offensichtlich</gloss>
+        <gloss xml:lang="hun">kereken</gloss>
+        <gloss xml:lang="hun">nyilvánvalóan</gloss>
+        <gloss xml:lang="hun">világosan</gloss>
+        <gloss xml:lang="rus">очевидный</gloss>
+        <gloss xml:lang="slv">jasen</gloss>
+        <gloss xml:lang="slv">razumljiv</gloss>
+        <gloss xml:lang="slv">očiten</gloss>
+        <gloss xml:lang="spa">obvio</gloss>
+        <gloss xml:lang="spa">evidente</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000225</ent_seq>
+    <k_ele>
+        <keb>明白</keb>
+        <ke_inf>&ateji;</ke_inf>
+    </k_ele>
+    <k_ele>
+        <keb>偸閑</keb>
+        <ke_inf>&ateji;</ke_inf>
+    </k_ele>
+    <k_ele>
+        <keb>白地</keb>
+        <ke_inf>&ateji;</ke_inf>
+    </k_ele>
+    <r_ele>
+        <reb>あからさま</reb>
+    </r_ele>
+    <sense>
+        <pos>&adj-na;</pos>
+        <pos>&adj-no;</pos>
+        <misc>&uk;</misc>
+        <gloss>plain</gloss>
+        <gloss>frank</gloss>
+        <gloss>candid</gloss>
+        <gloss>open</gloss>
+        <gloss>direct</gloss>
+        <gloss>straightforward</gloss>
+        <gloss>unabashed</gloss>
+        <gloss>blatant</gloss>
+        <gloss>flagrant</gloss>
+        <gloss xml:lang="ger">(1) klar</gloss>
+        <gloss xml:lang="ger">deutlich</gloss>
+        <gloss xml:lang="ger">ausdrücklich</gloss>
+        <gloss xml:lang="ger">(2) offen</gloss>
+        <gloss xml:lang="ger">offenherzig</gloss>
+        <gloss xml:lang="ger">unverhohlen</gloss>
+        <gloss xml:lang="ger">aufrichtig</gloss>
+        <gloss xml:lang="ger">frisch von der Leber weg</gloss>
+        <gloss xml:lang="hun">kereken</gloss>
+        <gloss xml:lang="hun">nyilvánvalóan</gloss>
+        <gloss xml:lang="hun">világosan</gloss>
+        <gloss xml:lang="rus">очевидный</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000230</ent_seq>
+    <k_ele>
+        <keb>明かん</keb>
+    </k_ele>
+    <r_ele>
+        <reb>あかん</reb>
+    </r_ele>
+    <r_ele>
+        <reb>アカン</reb>
+        <re_nokanji/>
+    </r_ele>
+    <sense>
+        <pos>&exp;</pos>
+        <misc>&uk;</misc>
+        <dial>&ksb;</dial>
+        <gloss>useless</gloss>
+        <gloss>no good</gloss>
+        <gloss>hopeless</gloss>
+        <gloss xml:lang="ger">(1) schlecht</gloss>
+        <gloss xml:lang="ger">mies</gloss>
+        <gloss xml:lang="ger">blöd zwecklos</gloss>
+        <gloss xml:lang="ger">umsonst</gloss>
+        <gloss xml:lang="ger">(2) zu nichts nutze</gloss>
+        <gloss xml:lang="ger">nutzlos</gloss>
+        <gloss xml:lang="ger">(3) unmöglich</gloss>
+        <gloss xml:lang="spa">inútil</gloss>
+        <gloss xml:lang="spa">no bueno</gloss>
+        <gloss xml:lang="spa">sin esperanza</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000260</ent_seq>
+    <k_ele>
+        <keb>悪どい</keb>
+        <ke_inf>&iK;</ke_inf>
+    </k_ele>
+    <r_ele>
+        <reb>あくどい</reb>
+    </r_ele>
+    <sense>
+        <pos>&adj-i;</pos>
+        <misc>&uk;</misc>
+        <gloss>gaudy</gloss>
+        <gloss>showy</gloss>
+        <gloss>excessive</gloss>
+    </sense>
+    <sense>
+        <gloss>crooked</gloss>
+        <gloss>vicious</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000280</ent_seq>
+    <k_ele>
+        <keb>論う</keb>
+    </k_ele>
+    <r_ele>
+        <reb>あげつらう</reb>
+    </r_ele>
+    <sense>
+        <pos>&v5u;</pos>
+        <pos>&vt;</pos>
+        <misc>&uk;</misc>
+        <gloss>to discuss</gloss>
+        <gloss xml:lang="ger">(1) diskutieren</gloss>
+        <gloss xml:lang="ger">erörtern</gloss>
+        <gloss xml:lang="ger">(2) kritisieren</gloss>
+        <gloss xml:lang="ger">bekritteln</gloss>
+        <gloss xml:lang="ger">(3) aufgreifen (ein Thema)</gloss>
+        <gloss xml:lang="hun">fejteget</gloss>
+        <gloss xml:lang="hun">gáncsoskodik</gloss>
+        <gloss xml:lang="hun">hibásnak talál</gloss>
+        <gloss xml:lang="hun">kritizál</gloss>
+        <gloss xml:lang="hun">bírál</gloss>
+        <gloss xml:lang="spa">cuestionar</gloss>
+        <gloss xml:lang="spa">sopesar los pros y los contras</gloss>
+    </sense>
+    <sense>
+        <gloss>to find fault with</gloss>
+        <gloss>to criticize</gloss>
+        <gloss>to criticise</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000290</ent_seq>
+    <r_ele>
+        <reb>あさひ</reb>
+    </r_ele>
+    <sense>
+        <pos>&n;</pos>
+        <gloss>Jouetsu line express Shinkansen</gloss>
+        <gloss xml:lang="ger">(m) Asahi-Shinkansen (fährt an den meisten Stationen der Jōetsu-Linie vorbei)</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000300</ent_seq>
+    <r_ele>
+        <reb>あしらう</reb>
+    </r_ele>
+    <sense>
+        <pos>&v5u;</pos>
+        <pos>&vt;</pos>
+        <gloss>to arrange</gloss>
+        <gloss>to treat</gloss>
+        <gloss>to handle</gloss>
+        <gloss>to deal with</gloss>
+        <gloss xml:lang="dut">(1) behandelen</gloss>
+        <gloss xml:lang="dut">ontvangen</gloss>
+        <gloss xml:lang="dut">onthalen</gloss>
+        <gloss xml:lang="dut">omgaan met</gloss>
+        <gloss xml:lang="dut">omspringen met</gloss>
+        <gloss xml:lang="dut">(2) nonchalant</gloss>
+        <gloss xml:lang="dut">slordig</gloss>
+        <gloss xml:lang="dut">zozo behandelen</gloss>
+        <gloss xml:lang="dut">lichtzinnig omgaan met</gloss>
+        <gloss xml:lang="dut">onzorgvuldig omspringen met</gloss>
+        <gloss xml:lang="dut">(3) van iets passends voorzien</gloss>
+        <gloss xml:lang="dut">schikken</gloss>
+        <gloss xml:lang="dut">plaatsen</gloss>
+        <gloss xml:lang="dut">{肉に野菜を} garneren met</gloss>
+        <gloss xml:lang="dut">versieren met</gloss>
+        <gloss xml:lang="dut">opmaken met</gloss>
+        <gloss xml:lang="dut">dresseren</gloss>
+        <gloss xml:lang="dut">aankleden</gloss>
+        <gloss xml:lang="dut">afwerken</gloss>
+        <gloss xml:lang="dut">(4) {nō-term} muzikaal begeleiden</gloss>
+        <gloss xml:lang="ger">(1) behandeln</gloss>
+        <gloss xml:lang="ger">empfangen</gloss>
+        <gloss xml:lang="ger">entgegennehmen</gloss>
+        <gloss xml:lang="ger">(2) handhaben</gloss>
+        <gloss xml:lang="ger">umgehen</gloss>
+        <gloss xml:lang="ger">(3) garnieren</gloss>
+        <gloss xml:lang="ger">hinzufügen</gloss>
+        <gloss xml:lang="hun">elrendez</gloss>
+        <gloss xml:lang="hun">megállapodik</gloss>
+        <gloss xml:lang="hun">bánik vkivel</gloss>
+        <gloss xml:lang="hun">kezel</gloss>
+        <gloss xml:lang="hun">hozzányúl</gloss>
+        <gloss xml:lang="hun">irányít</gloss>
+        <gloss xml:lang="hun">foglalkozik vmivel</gloss>
+        <gloss xml:lang="hun">kereskedik vkivel</gloss>
+        <gloss xml:lang="ita">organizzare</gloss>
+        <gloss xml:lang="ita">trattare</gloss>
+        <gloss xml:lang="ita">fare fronte</gloss>
+        <gloss xml:lang="ita">occuparsi di</gloss>
+        <gloss xml:lang="spa">adornar</gloss>
+        <gloss xml:lang="spa">organizar</gloss>
+        <gloss xml:lang="spa">tratar con</gloss>
+        <gloss xml:lang="spa">manejar</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000310</ent_seq>
+    <k_ele>
+        <keb>馬酔木</keb>
+    </k_ele>
+    <r_ele>
+        <reb>あせび</reb>
+    </r_ele>
+    <r_ele>
+        <reb>あしび</reb>
+    </r_ele>
+    <r_ele>
+        <reb>あせぼ</reb>
+    </r_ele>
+    <r_ele>
+        <reb>あせぶ</reb>
+    </r_ele>
+    <r_ele>
+        <reb>アセビ</reb>
+        <re_nokanji/>
+    </r_ele>
+    <sense>
+        <pos>&n;</pos>
+        <misc>&uk;</misc>
+        <gloss>Japanese andromeda (Pieris japonica)</gloss>
+        <gloss>lily-of-the-valley</gloss>
+        <gloss xml:lang="dut">(1) {plantk.} Japanse rotsheide</gloss>
+        <gloss xml:lang="dut">Pieris japonica</gloss>
+        <gloss xml:lang="dut">(2) Ashibi {naam van een tanka-tijdschrift, 1903-1908}</gloss>
+        <gloss xml:lang="dut">(3) Ashibi {sedert 1928 de naam van het vanaf 1922 gepubliceerde haiku-tijdschrift Hamayumi 破魔弓}</gloss>
+        <gloss xml:lang="dut">{plantk.} Japanse rotsheide</gloss>
+        <gloss xml:lang="dut">Pieris japonica</gloss>
+        <gloss xml:lang="ger">(f) Lavendelheide</gloss>
+        <gloss xml:lang="ger">Pieris japonica</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000320</ent_seq>
+    <k_ele>
+        <keb>彼処</keb>
+        <ke_pri>ichi1</ke_pri>
+    </k_ele>
+    <k_ele>
+        <keb>彼所</keb>
+    </k_ele>
+    <r_ele>
+        <reb>あそこ</reb>
+        <re_pri>ichi1</re_pri>
+    </r_ele>
+    <r_ele>
+        <reb>あすこ</reb>
+    </r_ele>
+    <r_ele>
+        <reb>かしこ</reb>
+    </r_ele>
+    <r_ele>
+        <reb>あしこ</reb>
+        <re_inf>&ok;</re_inf>
+    </r_ele>
+    <r_ele>
+        <reb>あこ</reb>
+        <re_inf>&ok;</re_inf>
+    </r_ele>
+    <sense>
+        <pos>&pn;</pos>
+        <pos>&adj-no;</pos>
+        <xref>何処</xref>
+        <xref>此処</xref>
+        <xref>其処</xref>
+        <misc>&uk;</misc>
+        <gloss>there (place physically distant from both speaker and listener)</gloss>
+        <gloss>over there</gloss>
+        <gloss>that place</gloss>
+        <gloss>yonder</gloss>
+        <gloss xml:lang="dut">(1) ginds</gloss>
+        <gloss xml:lang="dut">daar</gloss>
+        <gloss xml:lang="dut">daarginds</gloss>
+        <gloss xml:lang="dut">ginder</gloss>
+        <gloss xml:lang="dut">daarginder</gloss>
+        <gloss xml:lang="dut">(2) zodanig</gloss>
+        <gloss xml:lang="dut">dermate</gloss>
+        <gloss xml:lang="dut">zó</gloss>
+        <gloss xml:lang="dut">zó zeer</gloss>
+        <gloss xml:lang="dut">in zoverre</gloss>
+        <gloss xml:lang="dut">(3) {arch.} hij</gloss>
+        <gloss xml:lang="dut">die</gloss>
+        <gloss xml:lang="dut">daar</gloss>
+        <gloss xml:lang="dut">ginds</gloss>
+        <gloss xml:lang="dut">ginder</gloss>
+        <gloss xml:lang="dut">daarginds</gloss>
+        <gloss xml:lang="dut">daarginder</gloss>
+        <gloss xml:lang="dut">{volkst.} daaro</gloss>
+        <gloss xml:lang="fre">cet endroit-là</gloss>
+        <gloss xml:lang="fre">là</gloss>
+        <gloss xml:lang="fre">là-bas</gloss>
+        <gloss xml:lang="ger">daselbst</gloss>
+        <gloss xml:lang="ger">dort</gloss>
+        <gloss xml:lang="ger">dort drüben</gloss>
+        <gloss xml:lang="ger">dahinten</gloss>
+        <gloss xml:lang="ger">(1) dort</gloss>
+        <gloss xml:lang="ger">dort drüben</gloss>
+        <gloss xml:lang="ger">dahinten</gloss>
+        <gloss xml:lang="ger">(2) männliche und weibliche Geschlechtsorgane</gloss>
+        <gloss xml:lang="hun">ugyan, ugyan!</gloss>
+        <gloss xml:lang="hun">ottani</gloss>
+        <gloss xml:lang="ita">là, lì (luogo distante fisicamente sia da chi parla che da chi ascolta)</gloss>
+        <gloss xml:lang="ita">laggiù</gloss>
+        <gloss xml:lang="ita">quel luogo</gloss>
+        <gloss xml:lang="ita">di là</gloss>
+        <gloss xml:lang="ita">genitali</gloss>
+        <gloss xml:lang="ita">così lontano, fino a quel punto (qualcosa distante in senso figurato sia da chi parla che da chi ascolta)</gloss>
+        <gloss xml:lang="ita">così lontano, fino a quel punto (qualcosa distante in senso figurato sia da chi parla che da chi ascolta</gloss>
+        <gloss xml:lang="rus">там (место удалённое от всех участников беседы)</gloss>
+        <gloss xml:lang="spa">(1) allá</gloss>
+        <gloss xml:lang="spa">allí</gloss>
+        <gloss xml:lang="spa">aquel lugar</gloss>
+        <gloss xml:lang="spa">(2) genitales</gloss>
+    </sense>
+    <sense>
+        <stagr>あそこ</stagr>
+        <stagr>あすこ</stagr>
+        <pos>&n;</pos>
+        <misc>&col;</misc>
+        <gloss>genitals</gloss>
+        <gloss xml:lang="fre">organes génitaux</gloss>
+    </sense>
+    <sense>
+        <xref>あれほど</xref>
+        <gloss>that far (something psychologically distant from both speaker and listener)</gloss>
+        <gloss>that much</gloss>
+        <gloss>that point</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000360</ent_seq>
+    <r_ele>
+        <reb>あっさり</reb>
+        <re_pri>ichi1</re_pri>
+    </r_ele>
+    <sense>
+        <pos>&adv-to;</pos>
+        <pos>&vs;</pos>
+        <misc>&on-mim;</misc>
+        <gloss>easily</gloss>
+        <gloss>readily</gloss>
+        <gloss>quickly</gloss>
+        <gloss xml:lang="dut">(1) eenvoudig</gloss>
+        <gloss xml:lang="dut">simpel</gloss>
+        <gloss xml:lang="dut">zonder meer</gloss>
+        <gloss xml:lang="dut">gewoonweg</gloss>
+        <gloss xml:lang="dut">sec</gloss>
+        <gloss xml:lang="dut">tout court</gloss>
+        <gloss xml:lang="dut">(2) openhartig</gloss>
+        <gloss xml:lang="dut">eerlijk</gloss>
+        <gloss xml:lang="dut">rondborstig</gloss>
+        <gloss xml:lang="dut">frank</gloss>
+        <gloss xml:lang="dut">zonder enige reserve</gloss>
+        <gloss xml:lang="dut">(3) zo maar</gloss>
+        <gloss xml:lang="dut">vlot</gloss>
+        <gloss xml:lang="dut">met gemak</gloss>
+        <gloss xml:lang="dut">moeiteloos</gloss>
+        <gloss xml:lang="dut">gewoonweg</gloss>
+        <gloss xml:lang="dut">geredelijk</gloss>
+        <gloss xml:lang="dut">licht</gloss>
+        <gloss xml:lang="fre">carrément</gloss>
+        <gloss xml:lang="fre">facilement</gloss>
+        <gloss xml:lang="fre">rapidement</gloss>
+        <gloss xml:lang="fre">simplement</gloss>
+        <gloss xml:lang="ger">(1) einfach</gloss>
+        <gloss xml:lang="ger">schlicht</gloss>
+        <gloss xml:lang="ger">unaufdringlich</gloss>
+        <gloss xml:lang="ger">natürlich</gloss>
+        <gloss xml:lang="ger">leicht</gloss>
+        <gloss xml:lang="ger">(2) leicht</gloss>
+        <gloss xml:lang="ger">problemlos</gloss>
+        <gloss xml:lang="ger">leicht sein</gloss>
+        <gloss xml:lang="ger">einfach sein</gloss>
+        <gloss xml:lang="ger">unkompliziert sein</gloss>
+        <gloss xml:lang="ger">einfach</gloss>
+        <gloss xml:lang="ger">kurz</gloss>
+        <gloss xml:lang="ger">leicht</gloss>
+        <gloss xml:lang="hun">készségesen</gloss>
+        <gloss xml:lang="hun">szívesen</gloss>
+        <gloss xml:lang="ita">semplicemente</gloss>
+        <gloss xml:lang="ita">facilmente, senza sforzo</gloss>
+        <gloss xml:lang="ita">subito, immediatamente</gloss>
+        <gloss xml:lang="ita">francamente, schiettamente</gloss>
+        <gloss xml:lang="slv">z lahkoto</gloss>
+        <gloss xml:lang="slv">hitro</gloss>
+        <gloss xml:lang="slv">enostavno</gloss>
+        <gloss xml:lang="spa">simplemente</gloss>
+        <gloss xml:lang="spa">sencillamente</gloss>
+        <gloss xml:lang="spa">brevemente</gloss>
+        <gloss xml:lang="spa">llanamente</gloss>
+        <gloss xml:lang="spa">francamente</gloss>
+        <gloss xml:lang="spa">en seguida</gloss>
+        <gloss xml:lang="spa">brevemente</gloss>
+        <gloss xml:lang="spa">sencillamente</gloss>
+        <gloss xml:lang="spa">someramente</gloss>
+        <gloss xml:lang="spa">llanamente</gloss>
+    </sense>
+    <sense>
+        <misc>&on-mim;</misc>
+        <gloss>lightly (flavored food, applied makeup)</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000390</ent_seq>
+    <k_ele>
+        <keb>あっという間に</keb>
+    </k_ele>
+    <k_ele>
+        <keb>あっと言う間に</keb>
+    </k_ele>
+    <k_ele>
+        <keb>あっとゆう間に</keb>
+    </k_ele>
+    <r_ele>
+        <reb>あっというまに</reb>
+        <re_restr>あっという間に</re_restr>
+        <re_restr>あっと言う間に</re_restr>
+    </r_ele>
+    <r_ele>
+        <reb>あっとゆうまに</reb>
+        <re_restr>あっと言う間に</re_restr>
+        <re_restr>あっとゆう間に</re_restr>
+    </r_ele>
+    <sense>
+        <pos>&exp;</pos>
+        <gloss>just like that</gloss>
+        <gloss>in the twinkling of an eye</gloss>
+        <gloss>in the blink of an eye</gloss>
+        <gloss>in the time it takes to say "ah!"</gloss>
+        <gloss xml:lang="ger">im Nu</gloss>
+        <gloss xml:lang="ger">im Handumdrehen</gloss>
+        <gloss xml:lang="ger">in einem Augenblick</gloss>
+        <gloss xml:lang="ger">wie mit einem Schlag (etwa: in der Zeit, in der man gerade nur {Transcr.: a} sagt)</gloss>
+        <gloss xml:lang="ita">in un attimo</gloss>
+        <gloss xml:lang="ita">in un secondo</gloss>
+        <gloss xml:lang="ita">(posso cancellare le linee con lo stesso codice)</gloss>
+        <gloss xml:lang="spa">tal que así (lit: en lo que se tarda en decir "Ah!")</gloss>
+        <gloss xml:lang="spa">en un abrir y cerrar de ojos</gloss>
+        <gloss xml:lang="spa">en un pestañeo</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000400</ent_seq>
+    <r_ele>
+        <reb>あっぷあっぷ</reb>
+    </r_ele>
+    <sense>
+        <pos>&adv;</pos>
+        <pos>&n;</pos>
+        <pos>&vs;</pos>
+        <gloss>floundering while nearly drowning</gloss>
+        <gloss xml:lang="ger">(1) ertrinkend</gloss>
+        <gloss xml:lang="ger">nach Luft schnappend</gloss>
+        <gloss xml:lang="ger">(2) bis zum Hals in Schwierigkeiten steckend</gloss>
+        <gloss xml:lang="ger">(1) nach Luft schnappen</gloss>
+        <gloss xml:lang="ger">am Ertrinken sein</gloss>
+        <gloss xml:lang="ger">(2) in großen Schwierigkeiten stecken</gloss>
+        <gloss xml:lang="ita">dibattersi rischiando di affogare</gloss>
+        <gloss xml:lang="spa">estar a punto de ahogarse</gloss>
+    </sense>
+    <sense>
+        <gloss>suffering</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000410</ent_seq>
+    <r_ele>
+        <reb>あどけない</reb>
+    </r_ele>
+    <sense>
+        <pos>&adj-i;</pos>
+        <gloss>innocent</gloss>
+        <gloss>cherubic</gloss>
+        <gloss xml:lang="dut">onschuldig</gloss>
+        <gloss xml:lang="dut">argeloos</gloss>
+        <gloss xml:lang="dut">onnozel</gloss>
+        <gloss xml:lang="dut">innocent</gloss>
+        <gloss xml:lang="dut">naïef</gloss>
+        <gloss xml:lang="dut">ingénu</gloss>
+        <gloss xml:lang="dut">engelachtig</gloss>
+        <gloss xml:lang="dut">angeliek</gloss>
+        <gloss xml:lang="dut">kinderlijk</gloss>
+        <gloss xml:lang="dut">kinderachtig</gloss>
+        <gloss xml:lang="ger">unschuldig</gloss>
+        <gloss xml:lang="ger">kindlich</gloss>
+        <gloss xml:lang="ger">unbefangen</gloss>
+        <gloss xml:lang="ger">naiv</gloss>
+        <gloss xml:lang="ger">arglos</gloss>
+        <gloss xml:lang="hun">angyali</gloss>
+        <gloss xml:lang="hun">dominikánus szerzetes</gloss>
+        <gloss xml:lang="hun">dominikánus</gloss>
+        <gloss xml:lang="hun">kerubi</gloss>
+        <gloss xml:lang="hun">kerubszerű</gloss>
+        <gloss xml:lang="ita">innocente, ingenuo</gloss>
+        <gloss xml:lang="ita">angelico</gloss>
+        <gloss xml:lang="spa">inocente</gloss>
+        <gloss xml:lang="spa">ingenuo</gloss>
+        <gloss xml:lang="spa">sencillo</gloss>
+        <gloss xml:lang="spa">cándido</gloss>
+        <gloss xml:lang="spa">infantil</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000420</ent_seq>
+    <k_ele>
+        <keb>彼の</keb>
+        <ke_pri>spec1</ke_pri>
+    </k_ele>
+    <r_ele>
+        <reb>あの</reb>
+        <re_pri>spec1</re_pri>
+    </r_ele>
+    <r_ele>
+        <reb>かの</reb>
+    </r_ele>
+    <sense>
+        <pos>&adj-pn;</pos>
+        <xref>何の・どの</xref>
+        <xref>此の</xref>
+        <xref>其の・1</xref>
+        <xref>彼・あれ・1</xref>
+        <misc>&uk;</misc>
+        <gloss>that (someone or something distant from both speaker and listener, or situation unfamiliar to both speaker and listener)</gloss>
+        <gloss xml:lang="dut">die</gloss>
+        <gloss xml:lang="dut">dat</gloss>
+        <gloss xml:lang="ger">jenes</gloss>
+        <gloss xml:lang="ger">jener</gloss>
+        <gloss xml:lang="ger">das … dort</gloss>
+        <gloss xml:lang="ger">der … dahinten</gloss>
+        <gloss xml:lang="ger">jener</gloss>
+        <gloss xml:lang="ger">jene</gloss>
+        <gloss xml:lang="ita">quello (qualcuno o qualcosa distante sia da chi parla che da chi ascolta;qualcosa sconosciuta o poco conosciuta da entrambi i partecipanti del discorso)</gloss>
+        <gloss xml:lang="rus">тот (предмет удалённый от всех участников беседы)</gloss>
+        <gloss xml:lang="spa">aquel</gloss>
+        <gloss xml:lang="spa">aquella</gloss>
+        <gloss xml:lang="spa">aquellos</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000430</ent_seq>
+    <r_ele>
+        <reb>あのう</reb>
+        <re_pri>spec1</re_pri>
+    </r_ele>
+    <r_ele>
+        <reb>あの</reb>
+        <re_pri>spec1</re_pri>
+    </r_ele>
+    <r_ele>
+        <reb>あのー</reb>
+    </r_ele>
+    <sense>
+        <pos>&int;</pos>
+        <gloss>say</gloss>
+        <gloss>well</gloss>
+        <gloss>errr ...</gloss>
+        <gloss xml:lang="ger">(1) ähm</gloss>
+        <gloss xml:lang="ger">(2) und …</gloss>
+        <gloss xml:lang="ger">also…</gloss>
+        <gloss xml:lang="ger">nun …</gloss>
+        <gloss xml:lang="ger">also …</gloss>
+        <gloss xml:lang="ger">äh …</gloss>
+        <gloss xml:lang="hun">helyesen</gloss>
+        <gloss xml:lang="ita">ehi, scusi, senta</gloss>
+        <gloss xml:lang="ita">ehm...</gloss>
+        <gloss xml:lang="slv">tisto {tam, stran od mene in tebe}</gloss>
+        <gloss xml:lang="slv">ono</gloss>
+        <gloss xml:lang="slv">A... (Oprostite,..)</gloss>
+        <gloss xml:lang="spa">esto...</gloss>
+        <gloss xml:lang="spa">pues...</gloss>
+        <gloss xml:lang="spa">digo...</gloss>
+        <gloss xml:lang="spa">errr...</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000440</ent_seq>
+    <k_ele>
+        <keb>あの人</keb>
+    </k_ele>
+    <k_ele>
+        <keb>彼の人</keb>
+    </k_ele>
+    <r_ele>
+        <reb>あのひと</reb>
+    </r_ele>
+    <sense>
+        <pos>&pn;</pos>
+        <pos>&adj-no;</pos>
+        <gloss>he</gloss>
+        <gloss>she</gloss>
+        <gloss>that person</gloss>
+        <gloss xml:lang="dut">jij (daar)</gloss>
+        <gloss xml:lang="dut">{Belg.N.} gij (daar)</gloss>
+        <gloss xml:lang="dut">(1) die mens</gloss>
+        <gloss xml:lang="dut">die persoon</gloss>
+        <gloss xml:lang="dut">die man</gloss>
+        <gloss xml:lang="dut">hij</gloss>
+        <gloss xml:lang="dut">{♀, i.h.b.} mijn lief</gloss>
+        <gloss xml:lang="dut">mijn man</gloss>
+        <gloss xml:lang="dut">(2) die vrouw</gloss>
+        <gloss xml:lang="dut">zij</gloss>
+        <gloss xml:lang="dut">ze</gloss>
+        <gloss xml:lang="fre">cette personne</gloss>
+        <gloss xml:lang="fre">elle</gloss>
+        <gloss xml:lang="fre">lui</gloss>
+        <gloss xml:lang="ger">(1) er</gloss>
+        <gloss xml:lang="ger">sie</gloss>
+        <gloss xml:lang="ger">jene (f) Person</gloss>
+        <gloss xml:lang="ger">(2) er</gloss>
+        <gloss xml:lang="ger">mein (m) Freund</gloss>
+        <gloss xml:lang="ger">mein (m) Mann (von Frauen benutztes Pronom um auf eine männliche Person in der dritten Person hinzuweisen)</gloss>
+        <gloss xml:lang="ita">lui</gloss>
+        <gloss xml:lang="ita">lei</gloss>
+        <gloss xml:lang="ita">quella persona</gloss>
+        <gloss xml:lang="rus">он</gloss>
+        <gloss xml:lang="rus">она</gloss>
+        <gloss xml:lang="rus">тот человек</gloss>
+        <gloss xml:lang="slv">tisti človek</gloss>
+        <gloss xml:lang="slv">on</gloss>
+        <gloss xml:lang="slv">ona</gloss>
+        <gloss xml:lang="spa">esa persona</gloss>
+        <gloss xml:lang="spa">él</gloss>
+        <gloss xml:lang="spa">ella</gloss>
+    </sense>
+    <sense>
+        <misc>&arch;</misc>
+        <gloss>you</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000450</ent_seq>
+    <k_ele>
+        <keb>あの方</keb>
+        <ke_pri>spec1</ke_pri>
+    </k_ele>
+    <k_ele>
+        <keb>彼の方</keb>
+    </k_ele>
+    <r_ele>
+        <reb>あのかた</reb>
+        <re_pri>spec1</re_pri>
+    </r_ele>
+    <sense>
+        <pos>&pn;</pos>
+        <pos>&adj-no;</pos>
+        <misc>&hon;</misc>
+        <gloss>that gentleman (lady)</gloss>
+        <gloss>he</gloss>
+        <gloss>she</gloss>
+        <gloss xml:lang="dut">die persoon</gloss>
+        <gloss xml:lang="dut">hij</gloss>
+        <gloss xml:lang="dut">zij</gloss>
+        <gloss xml:lang="ger">diese (f) Dame</gloss>
+        <gloss xml:lang="ger">dieser (m) Herr</gloss>
+        <gloss xml:lang="ger">diese (f) Person</gloss>
+        <gloss xml:lang="ger">er</gloss>
+        <gloss xml:lang="ger">sie</gloss>
+        <gloss xml:lang="ita">quella persona</gloss>
+        <gloss xml:lang="ita">lui</gloss>
+        <gloss xml:lang="ita">lei</gloss>
+        <gloss xml:lang="rus">он</gloss>
+        <gloss xml:lang="rus">она</gloss>
+        <gloss xml:lang="rus">тот человек</gloss>
+        <gloss xml:lang="slv">tista oseba</gloss>
+        <gloss xml:lang="spa">ese señor</gloss>
+        <gloss xml:lang="spa">esa señora</gloss>
+        <gloss xml:lang="spa">él</gloss>
+        <gloss xml:lang="spa">ella</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000460</ent_seq>
+    <k_ele>
+        <keb>溢れる</keb>
+    </k_ele>
+    <r_ele>
+        <reb>あぶれる</reb>
+    </r_ele>
+    <sense>
+        <pos>&v1;</pos>
+        <pos>&vi;</pos>
+        <misc>&uk;</misc>
+        <gloss>to fail (in getting a job)</gloss>
+        <gloss>to miss out (at fishing, hunting, etc.)</gloss>
+        <gloss xml:lang="spa">fallar (en conseguir un trabajo, pesca, cacería, etc)</gloss>
+    </sense>
+    <sense>
+        <misc>&uk;</misc>
+        <gloss>to be left out</gloss>
+        <gloss>to be crowded out</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000470</ent_seq>
+    <r_ele>
+        <reb>あべこべ</reb>
+        <re_pri>ichi1</re_pri>
+    </r_ele>
+    <sense>
+        <pos>&adj-na;</pos>
+        <pos>&n;</pos>
+        <misc>&on-mim;</misc>
+        <gloss>contrary</gloss>
+        <gloss>opposite</gloss>
+        <gloss>inverse</gloss>
+        <gloss xml:lang="dut">omgekeerde</gloss>
+        <gloss xml:lang="dut">tegengestelde</gloss>
+        <gloss xml:lang="dut">tegendeel</gloss>
+        <gloss xml:lang="dut">tegenovergestelde</gloss>
+        <gloss xml:lang="dut">averechtse</gloss>
+        <gloss xml:lang="dut">verkeerde eind</gloss>
+        <gloss xml:lang="dut">omgekeerde</gloss>
+        <gloss xml:lang="dut">verkeerde wereld</gloss>
+        <gloss xml:lang="dut">omgekeerd</gloss>
+        <gloss xml:lang="dut">andersom</gloss>
+        <gloss xml:lang="dut">vice versa</gloss>
+        <gloss xml:lang="dut">averechts</gloss>
+        <gloss xml:lang="dut">achterstevoren</gloss>
+        <gloss xml:lang="dut">de verkeerde</gloss>
+        <gloss xml:lang="dut">andere kant op</gloss>
+        <gloss xml:lang="dut">ondersteboven</gloss>
+        <gloss xml:lang="dut">op zijn kop</gloss>
+        <gloss xml:lang="dut">binnenste buiten</gloss>
+        <gloss xml:lang="dut">verkeerd</gloss>
+        <gloss xml:lang="dut">tegengesteld</gloss>
+        <gloss xml:lang="dut">tegenovergesteld</gloss>
+        <gloss xml:lang="dut">omgekeerd</gloss>
+        <gloss xml:lang="dut">invers</gloss>
+        <gloss xml:lang="dut">invert</gloss>
+        <gloss xml:lang="dut">ondersteboven gekeerd</gloss>
+        <gloss xml:lang="dut">staand</gloss>
+        <gloss xml:lang="dut">op zijn kop staand</gloss>
+        <gloss xml:lang="dut">averechts</gloss>
+        <gloss xml:lang="dut">{veroud., gew.} averecht</gloss>
+        <gloss xml:lang="fre">contraire</gloss>
+        <gloss xml:lang="fre">inverse</gloss>
+        <gloss xml:lang="fre">opposé</gloss>
+        <gloss xml:lang="ger">(f) Umkehrung</gloss>
+        <gloss xml:lang="ger">(n) Gegenteil</gloss>
+        <gloss xml:lang="ger">in die entgegengesetzte Richtung</gloss>
+        <gloss xml:lang="ger">andersherum</gloss>
+        <gloss xml:lang="ger">entgegengesetzt</gloss>
+        <gloss xml:lang="ger">umgekehrt</gloss>
+        <gloss xml:lang="hun">ellenkező</gloss>
+        <gloss xml:lang="hun">ellentét</gloss>
+        <gloss xml:lang="hun">ellentétes</gloss>
+        <gloss xml:lang="hun">szemben levő</gloss>
+        <gloss xml:lang="hun">ellenkezője vminek</gloss>
+        <gloss xml:lang="hun">fordítottja vminek</gloss>
+        <gloss xml:lang="hun">megfordított</gloss>
+        <gloss xml:lang="ita">contrario, opposto</gloss>
+        <gloss xml:lang="ita">rovescio</gloss>
+        <gloss xml:lang="ita">capovolto, sottosopra</gloss>
+        <gloss xml:lang="rus">наоборот</gloss>
+        <gloss xml:lang="spa">inversión</gloss>
+        <gloss xml:lang="spa">oposición</gloss>
+        <gloss xml:lang="spa">al revés</gloss>
+        <gloss xml:lang="spa">del revés</gloss>
+        <gloss xml:lang="spa">en sentido opuesto</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000480</ent_seq>
+    <k_ele>
+        <keb>阿呆陀羅</keb>
+    </k_ele>
+    <r_ele>
+        <reb>あほんだら</reb>
+    </r_ele>
+    <r_ele>
+        <reb>あほだら</reb>
+    </r_ele>
+    <sense>
+        <pos>&n;</pos>
+        <misc>&uk;</misc>
+        <dial>&ksb;</dial>
+        <gloss>fool</gloss>
+        <gloss>oaf</gloss>
+        <gloss>airhead</gloss>
+        <gloss xml:lang="ita">sciocco</gloss>
+        <gloss xml:lang="ita">zoticone</gloss>
+        <gloss xml:lang="ita">svampito</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000490</ent_seq>
+    <k_ele>
+        <keb>甘子</keb>
+    </k_ele>
+    <k_ele>
+        <keb>天魚</keb>
+    </k_ele>
+    <k_ele>
+        <keb>雨子</keb>
+    </k_ele>
+    <r_ele>
+        <reb>あまご</reb>
+    </r_ele>
+    <r_ele>
+        <reb>アマゴ</reb>
+        <re_nokanji/>
+    </r_ele>
+    <sense>
+        <pos>&n;</pos>
+        <xref>皐月鱒</xref>
+        <misc>&uk;</misc>
+        <gloss>land-locked variety of red-spotted masu trout (Oncorhynchus masou ishikawae)</gloss>
+        <gloss>amago</gloss>
+        <gloss xml:lang="ger">(m) Amago</gloss>
+        <gloss xml:lang="ger">Oncorhynchus rhodurus</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000500</ent_seq>
+    <r_ele>
+        <reb>あやす</reb>
+    </r_ele>
+    <sense>
+        <pos>&v5s;</pos>
+        <pos>&vt;</pos>
+        <gloss>to cuddle</gloss>
+        <gloss>to comfort</gloss>
+        <gloss>to rock</gloss>
+        <gloss>to soothe</gloss>
+        <gloss>to dandle</gloss>
+        <gloss>to humor</gloss>
+        <gloss>to humour</gloss>
+        <gloss>to lull</gloss>
+        <gloss xml:lang="ger">(1) beschwichtigen</gloss>
+        <gloss xml:lang="ger">beruhigen</gloss>
+        <gloss xml:lang="ger">hätscheln</gloss>
+        <gloss xml:lang="ger">liebkosen</gloss>
+        <gloss xml:lang="ger">(2) trösten</gloss>
+        <gloss xml:lang="ger">bei Laune halten</gloss>
+        <gloss xml:lang="ita">abbracciare</gloss>
+        <gloss xml:lang="ita">confortare</gloss>
+        <gloss xml:lang="ita">cullare</gloss>
+        <gloss xml:lang="ita">rassicurare</gloss>
+        <gloss xml:lang="ita">far saltare sulle ginocchia</gloss>
+        <gloss xml:lang="spa">mecer</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000510</ent_seq>
+    <r_ele>
+        <reb>あやふや</reb>
+        <re_pri>ichi1</re_pri>
+    </r_ele>
+    <sense>
+        <pos>&adj-na;</pos>
+        <pos>&n;</pos>
+        <misc>&on-mim;</misc>
+        <gloss>uncertain</gloss>
+        <gloss>vague</gloss>
+        <gloss>ambiguous</gloss>
+        <gloss xml:lang="dut">onbepaald</gloss>
+        <gloss xml:lang="dut">vaag</gloss>
+        <gloss xml:lang="dut">onduidelijk</gloss>
+        <gloss xml:lang="dut">onbestemd</gloss>
+        <gloss xml:lang="dut">onbeslist</gloss>
+        <gloss xml:lang="dut">vrijblijvend</gloss>
+        <gloss xml:lang="dut">nietszeggend</gloss>
+        <gloss xml:lang="dut">een slag om de arm houdend</gloss>
+        <gloss xml:lang="dut">ambigu</gloss>
+        <gloss xml:lang="dut">dubbelzinnig</gloss>
+        <gloss xml:lang="dut">meerduidig</gloss>
+        <gloss xml:lang="dut">equivoque</gloss>
+        <gloss xml:lang="fre">ambigu</gloss>
+        <gloss xml:lang="fre">douteux</gloss>
+        <gloss xml:lang="fre">incertain</gloss>
+        <gloss xml:lang="fre">indécis</gloss>
+        <gloss xml:lang="fre">vague</gloss>
+        <gloss xml:lang="ger">(1) unsicher</gloss>
+        <gloss xml:lang="ger">unbestimmt</gloss>
+        <gloss xml:lang="ger">ungewiss</gloss>
+        <gloss xml:lang="ger">zweifelhaft</gloss>
+        <gloss xml:lang="ger">(2) zweideutig</gloss>
+        <gloss xml:lang="ger">doppelsinnig</gloss>
+        <gloss xml:lang="ger">vage</gloss>
+        <gloss xml:lang="hun">bizonytalan</gloss>
+        <gloss xml:lang="hun">habozó</gloss>
+        <gloss xml:lang="hun">vitás</gloss>
+        <gloss xml:lang="hun">homályos</gloss>
+        <gloss xml:lang="hun">félreérthető</gloss>
+        <gloss xml:lang="hun">kétértelmű</gloss>
+        <gloss xml:lang="ita">incerto</gloss>
+        <gloss xml:lang="ita">vago</gloss>
+        <gloss xml:lang="ita">ambiguo</gloss>
+        <gloss xml:lang="spa">incierto</gloss>
+        <gloss xml:lang="spa">vago</gloss>
+        <gloss xml:lang="spa">ambiguo</gloss>
+        <gloss xml:lang="spa">inseguro</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000520</ent_seq>
+    <r_ele>
+        <reb>あら</reb>
+        <re_pri>ichi1</re_pri>
+    </r_ele>
+    <sense>
+        <pos>&int;</pos>
+        <misc>&fem;</misc>
+        <gloss>oh</gloss>
+        <gloss>ah</gloss>
+        <gloss xml:lang="dut">{♀} ach</gloss>
+        <gloss xml:lang="dut">zo?</gloss>
+        <gloss xml:lang="dut">och</gloss>
+        <gloss xml:lang="fre">ah</gloss>
+        <gloss xml:lang="fre">oh</gloss>
+        <gloss xml:lang="fre">perche à dents de scie (niphon spinosus de Cuvier)</gloss>
+        <gloss xml:lang="ger">Ah!</gloss>
+        <gloss xml:lang="ger">Oh!</gloss>
+        <gloss xml:lang="ger">Huch!</gloss>
+        <gloss xml:lang="ger">Also</gloss>
+        <gloss xml:lang="ger">nein!</gloss>
+        <gloss xml:lang="ger">Du meine Güte! (eher Frauensprache)</gloss>
+        <gloss xml:lang="slv">oh!</gloss>
+        <gloss xml:lang="slv">a res!</gloss>
+        <gloss xml:lang="spa">oh</gloss>
+        <gloss xml:lang="spa">ah</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000525</ent_seq>
+    <k_ele>
+        <keb>𩺊</keb>
+    </k_ele>
+    <r_ele>
+        <reb>あら</reb>
+    </r_ele>
+    <r_ele>
+        <reb>アラ</reb>
+        <re_nokanji/>
+    </r_ele>
+    <sense>
+        <pos>&n;</pos>
+        <misc>&uk;</misc>
+        <gloss>saw-edged perch (Niphon spinosus)</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000580</ent_seq>
+    <k_ele>
+        <keb>彼</keb>
+        <ke_pri>ichi1</ke_pri>
+    </k_ele>
+    <r_ele>
+        <reb>あれ</reb>
+        <re_pri>ichi1</re_pri>
+    </r_ele>
+    <r_ele>
+        <reb>あ</reb>
+        <re_inf>&ok;</re_inf>
+    </r_ele>
+    <sense>
+        <pos>&n;</pos>
+        <xref>何れ・1</xref>
+        <xref>此れ・1</xref>
+        <xref>其れ・1</xref>
+        <misc>&uk;</misc>
+        <gloss>that (indicating something distant from both speaker and listener (in space, time or psychologically), or something understood without naming it directly)</gloss>
+        <gloss xml:lang="dut">die</gloss>
+        <gloss xml:lang="dut">dat</gloss>
+        <gloss xml:lang="fre">çà</gloss>
+        <gloss xml:lang="fre">celui-là</gloss>
+        <gloss xml:lang="ger">(1) das dort</gloss>
+        <gloss xml:lang="ger">jenes</gloss>
+        <gloss xml:lang="ger">(2) männliche Geschlechtsorgane</gloss>
+        <gloss xml:lang="ger">(3) die Periode einer Frau</gloss>
+    </sense>
+    <sense>
+        <gloss>that person (used to refer to one's equals or inferiors)</gloss>
+    </sense>
+    <sense>
+        <misc>&arch;</misc>
+        <gloss>over there</gloss>
+    </sense>
+    <sense>
+        <stagr>あれ</stagr>
+        <misc>&col;</misc>
+        <gloss>down there (i.e. one's genitals)</gloss>
+        <gloss xml:lang="fre">organes génitaux</gloss>
+    </sense>
+    <sense>
+        <stagr>あれ</stagr>
+        <misc>&col;</misc>
+        <gloss>period</gloss>
+        <gloss>menses</gloss>
+        <gloss xml:lang="fre">menstruation</gloss>
+        <gloss xml:lang="fre">règles</gloss>
+    </sense>
+    <sense>
+        <pos>&int;</pos>
+        <misc>&uk;</misc>
+        <gloss>hey (expression of surprise, suspicion, etc.)</gloss>
+        <gloss>huh?</gloss>
+        <gloss>eh?</gloss>
+    </sense>
+    <sense>
+        <pos>&n;</pos>
+        <misc>&uk;</misc>
+        <gloss>that (something mentioned before which is distant psychologically or in terms of time)</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000590</ent_seq>
+    <r_ele>
+        <reb>あんな</reb>
+        <re_pri>ichi1</re_pri>
+    </r_ele>
+    <sense>
+        <pos>&adj-pn;</pos>
+        <xref>こんな</xref>
+        <xref>そんな</xref>
+        <xref>どんな・1</xref>
+        <gloss>such (about something or someone distant from both speaker and listener, or about a situation unfamiliar to both speaker and listener)</gloss>
+        <gloss>so</gloss>
+        <gloss>that</gloss>
+        <gloss>sort of</gloss>
+        <gloss xml:lang="dut">zo'n</gloss>
+        <gloss xml:lang="fre">cette sorte de</gloss>
+        <gloss xml:lang="fre">comme ça</gloss>
+        <gloss xml:lang="fre">de cette façon</gloss>
+        <gloss xml:lang="fre">tel</gloss>
+        <gloss xml:lang="fre">un tel</gloss>
+        <gloss xml:lang="ger">so ein</gloss>
+        <gloss xml:lang="ger">solch ein</gloss>
+        <gloss xml:lang="ger">derartig</gloss>
+        <gloss xml:lang="ger">derlei</gloss>
+        <gloss xml:lang="hun">akként</gloss>
+        <gloss xml:lang="hun">annyira</gloss>
+        <gloss xml:lang="hun">ennyire</gloss>
+        <gloss xml:lang="hun">így</gloss>
+        <gloss xml:lang="hun">tehát</gloss>
+        <gloss xml:lang="hun">úgy</gloss>
+        <gloss xml:lang="hun">úgyhogy</gloss>
+        <gloss xml:lang="hun">aki</gloss>
+        <gloss xml:lang="hun">akit</gloss>
+        <gloss xml:lang="hun">amaz</gloss>
+        <gloss xml:lang="hun">ami</gloss>
+        <gloss xml:lang="hun">amit</gloss>
+        <gloss xml:lang="hun">evégből</gloss>
+        <gloss xml:lang="slv">takšen {kot ono tam</gloss>
+        <gloss xml:lang="slv">stran od mene in tebe}</gloss>
+        <gloss xml:lang="slv">takšen</gloss>
+        <gloss xml:lang="spa">tal</gloss>
+        <gloss xml:lang="spa">semejante</gloss>
+        <gloss xml:lang="spa">como</gloss>
+        <gloss xml:lang="spa">parecido</gloss>
+        <gloss xml:lang="spa">así como aquello</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000600</ent_seq>
+    <k_ele>
+        <keb>いい加減にしなさい</keb>
+    </k_ele>
+    <r_ele>
+        <reb>いいかげんにしなさい</reb>
+    </r_ele>
+    <sense>
+        <pos>&exp;</pos>
+        <gloss>shape up!</gloss>
+        <gloss>act properly!</gloss>
+        <gloss xml:lang="ita">basta!, smettila!</gloss>
+        <gloss xml:lang="ita">comportati come si deve!</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000610</ent_seq>
+    <k_ele>
+        <keb>いい年をして</keb>
+    </k_ele>
+    <r_ele>
+        <reb>いいとしをして</reb>
+    </r_ele>
+    <sense>
+        <pos>&exp;</pos>
+        <xref>いい年して</xref>
+        <gloss>(in spite of) being old enough to know better</gloss>
+        <gloss xml:lang="ger">trotz seines reifen Alters</gloss>
+        <gloss xml:lang="ita">in età avanzata</gloss>
+        <gloss xml:lang="ita">alla tua età (con accezione negativa)</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000620</ent_seq>
+    <k_ele>
+        <keb>否々</keb>
+        <ke_pri>ichi1</ke_pri>
+    </k_ele>
+    <k_ele>
+        <keb>否否</keb>
+    </k_ele>
+    <r_ele>
+        <reb>いやいや</reb>
+        <re_pri>ichi1</re_pri>
+    </r_ele>
+    <r_ele>
+        <reb>いえいえ</reb>
+    </r_ele>
+    <sense>
+        <pos>&int;</pos>
+        <xref>嫌々・いやいや・3</xref>
+        <misc>&uk;</misc>
+        <gloss>no!</gloss>
+        <gloss>no no!</gloss>
+        <gloss>no, not at all</gloss>
+        <gloss xml:lang="fre">pas du tout</gloss>
+        <gloss xml:lang="ger">nein, nein</gloss>
+        <gloss xml:lang="hun">kelletlenül</gloss>
+        <gloss xml:lang="hun">vonakodva</gloss>
+        <gloss xml:lang="hun">húzódozva</gloss>
+        <gloss xml:lang="hun">nem akaródzva</gloss>
+        <gloss xml:lang="hun">nem akarva</gloss>
+        <gloss xml:lang="ita">malvolentieri, controvoglia, con riluttanza</gloss>
+        <gloss xml:lang="ita">fare segno di no con la testa</gloss>
+        <gloss xml:lang="rus">никоим образом</gloss>
+        <gloss xml:lang="rus">ни в коем случае</gloss>
+        <gloss xml:lang="slv">nerade volje</gloss>
+        <gloss xml:lang="slv">proti volji</gloss>
+        <gloss xml:lang="slv">neprostovoljno</gloss>
+        <gloss xml:lang="slv">z nejevoljo</gloss>
+        <gloss xml:lang="slv">nerad</gloss>
+        <gloss xml:lang="spa">a regañadientes</gloss>
+        <gloss xml:lang="spa">de ninguna manera</gloss>
+        <gloss xml:lang="spa">de mala gana</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000630</ent_seq>
+    <k_ele>
+        <keb>如何わしい</keb>
+    </k_ele>
+    <r_ele>
+        <reb>いかがわしい</reb>
+    </r_ele>
+    <sense>
+        <pos>&adj-i;</pos>
+        <misc>&uk;</misc>
+        <gloss>suspicious</gloss>
+        <gloss>dubious</gloss>
+        <gloss>unreliable</gloss>
+        <gloss xml:lang="ger">(1) bedenklich</gloss>
+        <gloss xml:lang="ger">anrüchig</gloss>
+        <gloss xml:lang="ger">dubios</gloss>
+        <gloss xml:lang="ger">fragwürdig</gloss>
+        <gloss xml:lang="ger">verdächtig</gloss>
+        <gloss xml:lang="ger">zweifelhaft</gloss>
+        <gloss xml:lang="ger">berüchtigt</gloss>
+        <gloss xml:lang="ger">undurchsichtig</gloss>
+        <gloss xml:lang="ger">(2) unanständig</gloss>
+        <gloss xml:lang="ger">anstößig</gloss>
+        <gloss xml:lang="ger">schlüpfrig</gloss>
+        <gloss xml:lang="ger">unschicklich</gloss>
+        <gloss xml:lang="ger">unzüchtig</gloss>
+        <gloss xml:lang="ger">unflätig</gloss>
+        <gloss xml:lang="hun">gyanús</gloss>
+        <gloss xml:lang="hun">habozó</gloss>
+        <gloss xml:lang="hun">kétértelmű</gloss>
+        <gloss xml:lang="hun">kétkedő</gloss>
+        <gloss xml:lang="hun">megbízhatatlan</gloss>
+        <gloss xml:lang="hun">illetlen</gloss>
+        <gloss xml:lang="hun">nem illő</gloss>
+        <gloss xml:lang="spa">dudoso</gloss>
+        <gloss xml:lang="spa">de dudosa fama</gloss>
+        <gloss xml:lang="spa">de dudosa reputación</gloss>
+        <gloss xml:lang="spa">de dudosa credibilidad</gloss>
+    </sense>
+    <sense>
+        <misc>&uk;</misc>
+        <gloss>indecent</gloss>
+        <gloss>unseemly</gloss>
+    </sense>
+    </entry>
+    <entry>
+    <ent_seq>1000640</ent_seq>
+    <r_ele>
+        <reb>いかす</reb>
+    </r_ele>
+    <r_ele>
+        <reb>イカす</reb>
+    </r_ele>
+    <sense>
+        <pos>&v5s;</pos>
+        <pos>&vi;</pos>
+        <gloss>to be smart</gloss>
+        <gloss>to be cool</gloss>
+        <gloss>to be sharp</gloss>
+        <gloss>to be stylish</gloss>
+        <gloss xml:lang="ger">klasse sein</gloss>
+        <gloss xml:lang="ger">toll sein</gloss>
+        <gloss xml:lang="ger">super aussehen</gloss>
+        <gloss xml:lang="ger">toll aussehen</gloss>
+    </sense>
+    </entry>
+</<JMdict>

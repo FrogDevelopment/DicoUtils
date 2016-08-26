@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         long start = System.currentTimeMillis();
 
-        Parser parser = new Parser("ger");
+        Parser parser = new Parser("fre");
 
         try {
             URL dir_url = ClassLoader.getSystemResource("JMdict");
@@ -20,7 +20,7 @@ public class Main {
             e.printStackTrace();
         }
 
-        System.out.println("nb data : " + parser.ENTRIES.size() + " in " + (System.currentTimeMillis() - start) + "ms");
+        System.out.println("nb entries : " + parser.ENTRIES.size() + " in " + (System.currentTimeMillis() - start) + "ms");
     }
 
 }

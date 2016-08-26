@@ -2,12 +2,12 @@ package fr.frogdevelopment.jmdict;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.LineIterator;
+import org.apache.commons.lang3.StringUtils;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -40,54 +40,58 @@ public class Parser {
     private static final Pattern GLOSS_PATTERN = Pattern.compile("^<gloss( xml:lang=\"(?<lang>\\w{3})\")?>(?<value>.*)(.*)</gloss>$");
 
     //
-    private final Map<String, String> LEXICON = new HashMap<>();
+//    private final Map<String, String> LEXICON = new HashMap<>();
     final List<Entry> ENTRIES = new ArrayList<>();
 
     private final String language;
-    private boolean isDefaultLanguage;
+    private final boolean isDefaultLanguage;
 
     public Parser(String language) {
-        this.language = language;
-        isDefaultLanguage = "eng".equalsIgnoreCase(language);
+        if (StringUtils.isBlank(language)) {
+            this.language = "eng";
+            isDefaultLanguage = true;
+        } else {
+            this.language = language;
+            isDefaultLanguage = "eng".equalsIgnoreCase(language);
+        }
     }
 
-    public void parse(File file) {
-
+    public void parse(File file) throws IOException {
+        LineIterator it = FileUtils.lineIterator(file, "UTF-8");
         try {
-            LineIterator it = FileUtils.lineIterator(file, "UTF-8");
-            try {
+            while (it.hasNext()) {
+                String line = it.nextLine();
 
-                while (it.hasNext()) {
-                    String line = it.nextLine();
-
-                    if (JMDICT_START.equals(line)) {
-                        fetchEntries(it);
-                    } else {
-                        Matcher matcher = ENTITY_PATTERN.matcher(line);
-                        if (matcher.matches()) {
-                            LEXICON.put(matcher.group("code"), matcher.group("label"));
-                        }
-                    }
+                if (JMDICT_START.equals(line)) {
+                    fetchEntries(it);
+//                } else {
+//                    Matcher matcher = ENTITY_PATTERN.matcher(line);
+//                    if (matcher.matches()) {
+//                        LEXICON.put(matcher.group("code"), matcher.group("label"));
+//                    }
                 }
-            } finally {
-                LineIterator.closeQuietly(it);
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } finally {
+            LineIterator.closeQuietly(it);
         }
     }
 
     private void fetchEntries(LineIterator it) {
-        Entry entry = new Entry();
+        Entry entry = null;
         while (it.hasNext()) {
             String line = it.nextLine();
 //            System.out.println(line);
 
             switch (line) {
                 case ENTRY_END:
+                    // do not add entry if empty senses (filtered by language)
                     if (!entry.senses.isEmpty()) {
                         ENTRIES.add(entry);
                     }
+                    break;
+
+                case ENTRY_START:
+                    entry = new Entry();
                     break;
 
                 case KANJI_ELEMENT_START:
@@ -133,6 +137,7 @@ public class Parser {
 //            System.out.println(line);
 
             if (SENSE_END.equals(line)) {
+                // do not add sense if empty gloss (filtered by language)
                 if (!sense.gloss.isEmpty()) {
                     entry.senses.add(sense);
                 }

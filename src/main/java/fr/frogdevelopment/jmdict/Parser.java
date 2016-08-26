@@ -105,6 +105,10 @@ public class Parser {
                 case SENSE_START:
                     getSenses(it, entry);
                     break;
+
+                default:
+                    // nothing to do, go to next line
+                    break;
             }
         }
     }

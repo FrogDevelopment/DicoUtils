@@ -37,7 +37,7 @@ public class Parser {
     private static final Pattern MISC_PATTERN = Pattern.compile("^<misc>&(?<misc>.*);</misc>$");
     private static final Pattern DIAL_PATTERN = Pattern.compile("^<dial>&(?<dial>.*);</dial>$");
 
-    private static final Pattern GLOSS_PATTERN = Pattern.compile("^<gloss( xml:lang=\"(?<lang>\\w{2,3})\")?>(?<value>.*)(.*)</gloss>$");
+    private static final Pattern GLOSS_PATTERN = Pattern.compile("^<gloss( xml:lang=\"(?<lang>\\w{3})\")?>(?<value>.*)(.*)</gloss>$");
 
     //
     private final Map<String, String> LEXICON = new HashMap<>();

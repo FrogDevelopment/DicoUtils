@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
 
 public class Parser {
 
-    private static final Pattern ENTITY_PATTERN = Pattern.compile("<!ENTITY (?<code>.*) \"(?<label>.*)\">");
+//    private static final Pattern ENTITY_PATTERN = Pattern.compile("<!ENTITY (?<code>.*) \"(?<label>.*)\">");
 
     private static final String JMDICT_START = "<JMdict>";
 

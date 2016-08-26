@@ -16,11 +16,21 @@ public class Sense {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE)
-                .append("pos", pos)
-                .append("field", field)
-                .append("misc", misc)
-                .append("gloss", gloss)
-                .toString();
+        ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE);
+        if (!pos.isEmpty()) {
+            builder.append("pos", pos);
+        }
+
+        if (!field.isEmpty()) {
+            builder.append("field", field);
+        }
+
+        if (!misc.isEmpty()) {
+            builder.append("misc", misc);
+        }
+
+        builder.append("gloss", gloss);
+
+        return builder.toString();
     }
 }

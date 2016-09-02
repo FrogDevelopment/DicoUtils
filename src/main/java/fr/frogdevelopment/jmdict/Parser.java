@@ -120,10 +120,6 @@ public class Parser {
                     // nothing to do, go to next line
                     break;
             }
-
-            if (ENTRIES.size() == 50) {
-                break;
-            }
         }
     }
 

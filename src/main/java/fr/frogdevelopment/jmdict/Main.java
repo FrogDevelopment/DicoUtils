@@ -10,7 +10,8 @@ public class Main {
     public static void main(String[] args) {
         long start = System.currentTimeMillis();
 
-        Parser parser = new Parser("fre");
+        String language = "fre";
+        Parser parser = new Parser(language);
 
         try {
             URL dir_url = ClassLoader.getSystemResource("JMdict");
@@ -20,8 +21,8 @@ public class Main {
 
             ObjectMapper mapper = new ObjectMapper();
 
-            mapper.writeValue(new File("d:/Temp/lexicon.json"), parser.getLexicon());
-            mapper.writeValue(new File("d:/Temp/entries.json"), parser.getEntries());
+//            mapper.writeValue(new File("d:/Temp/lexicon.json"), parser.getLexicon());
+            mapper.writeValue(new File("d:/Temp/entries_"+language+".json"), parser.getEntries());
 
         } catch (Exception e) {
             e.printStackTrace();

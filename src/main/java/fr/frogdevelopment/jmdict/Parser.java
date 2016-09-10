@@ -6,6 +6,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -37,11 +38,11 @@ public class Parser {
     private static final Pattern ANT_PATTERN = Pattern.compile("^<ant>(?<reading>.*)</ant>$");
     private static final Pattern FIELD_PATTERN = Pattern.compile("^<field>&(?<field>.*);</field>$");
     private static final Pattern MISC_PATTERN = Pattern.compile("^<misc>&(?<misc>.*);</misc>$");
+    private static final Pattern INFO_PATTERN = Pattern.compile("^<s_inf>(?<info>.*)</s_inf>$");
     private static final Pattern DIAL_PATTERN = Pattern.compile("^<dial>&(?<dial>.*);</dial>$");
 
     private static final Pattern GLOSS_PATTERN = Pattern.compile("^<gloss( xml:lang=\"(?<lang>\\w{3})\")?>(?<value>.*)(.*)</gloss>$");
 
-    //
     private final Map<String, String> LEXICON = new HashMap<>();
     private final List<Entry> ENTRIES = new ArrayList<>();
 
@@ -67,7 +68,7 @@ public class Parser {
     }
 
     public void parse(File file) throws IOException {
-        LineIterator it = FileUtils.lineIterator(file, "UTF-8");
+        LineIterator it = FileUtils.lineIterator(file,  StandardCharsets.UTF_8.name());
         try {
             while (it.hasNext()) {
                 String line = it.nextLine();
@@ -120,6 +121,10 @@ public class Parser {
                     // nothing to do, go to next line
                     break;
             }
+
+            if (ENTRIES.size() == 500) {
+                break;
+            }
         }
     }
 
@@ -160,13 +165,13 @@ public class Parser {
 
             matcher = XREF_PATTERN.matcher(line);
             if (matcher.matches()) {
-                // todo manage cross-reference
+                // toLine manage cross-reference
                 continue;
             }
 
             matcher = ANT_PATTERN.matcher(line);
             if (matcher.matches()) {
-                // todo manage antonym
+                // toLine manage antonym
                 continue;
             }
 
@@ -187,6 +192,13 @@ public class Parser {
                 sense.misc.add(matcher.group("misc"));
                 continue;
             }
+
+            matcher = INFO_PATTERN.matcher(line);
+            if (matcher.matches()) {
+                sense.info = matcher.group("info");
+                continue;
+            }
+
             matcher = DIAL_PATTERN.matcher(line);
             if (matcher.matches()) {
                 sense.dial.add(matcher.group("dial"));
@@ -202,7 +214,7 @@ public class Parser {
                 }
                 continue;
             } else {
-                // todo
+                // toLine
 //                System.out.println(line);
             }
         }

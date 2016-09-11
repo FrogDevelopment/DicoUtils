@@ -122,9 +122,9 @@ public class Parser {
                     break;
             }
 
-            if (ENTRIES.size() == 500) {
-                break;
-            }
+//            if (ENTRIES.size() == 500) {
+//                break;
+//            }
         }
     }
 

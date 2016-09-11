@@ -1,4 +1,4 @@
-package fr.frogdevelopment.jmdict;
+package fr.frogdevelopment.dico.jmdict;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
@@ -7,14 +7,8 @@ import java.io.File;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 
-public class Main {
+public class ToString {
 
-    //    public static void main(String[] args) {
-//
-////        Entry.fromString("御返し|おかえし|/////revenge|vs, n/////return favour (favor), return gift|/////change (in a cash transaction)");
-//        Entry.fromString("|かっかと|adv,adv-to,vs//on-mim///burning hotly,burning redly");
-//
-//    }
     public static void main(String[] args) {
         try {
             long start = System.currentTimeMillis();

@@ -1,4 +1,4 @@
-package fr.frogdevelopment.jmdict;
+package fr.frogdevelopment.dico.jmdict;
 
 import java.util.Arrays;
 import java.util.HashSet;

@@ -1,4 +1,4 @@
-package fr.frogdevelopment.jmdict;
+package fr.frogdevelopment.dico.jmdict;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.LineIterator;

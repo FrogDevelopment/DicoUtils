@@ -8,24 +8,26 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Main {
 
-    private static final Set<String> IDS = new HashSet<>();
-
     public static void main(String[] args) {
-        String from = "fra";
-        String to = "jpn";
+        String from = "jpn";
+        String to = "fra";
 
         try {
             long start = System.currentTimeMillis();
-            getSentences(from, to);
+
+            Main main = new Main(from, to);
+            main.getSentences();
             System.out.println(" in " + (System.currentTimeMillis() - start) + "ms");
-            getLinks(from, to);
+            main.getLinks();
             System.out.println(" in " + (System.currentTimeMillis() - start) + "ms");
 
         } catch (Exception e) {
@@ -33,41 +35,54 @@ public class Main {
         }
     }
 
-    private static void getSentences(String from, String to) throws IOException, URISyntaxException {
+    private final Map<String, String> mapFrom = new HashMap<>();
+    private final Map<String, String> mapTo = new HashMap<>();
+
+    private final String from;
+    private final String to;
+
+    public Main(String from, String to) {
+        this.from = from.toLowerCase();
+        this.to = to.toLowerCase();
+    }
+
+    private void getSentences() throws IOException, URISyntaxException {
         URL sentences = ClassLoader.getSystemResource("sentences.csv");
         File file = new File(sentences.toURI());
 
-        File fileOut = new File("e:/Temp/sentences_" + from + "_" + to + ".csv");
-
-        String regex = "(?<id>\\d+)\t(?<language>(%s|%s))\t(?<text>.*)";
-        Pattern pattern = Pattern.compile(String.format(regex, to, from));
+        String regex = "(?<ref>\\d+)\t(?<language>(%s))\t(?<text>.*)";
+        Pattern patternFrom = Pattern.compile(String.format(regex, from));
+        Pattern patternTo = Pattern.compile(String.format(regex, to));
 
         LineIterator it = FileUtils.lineIterator(file, StandardCharsets.UTF_8.name());
-        final Set<String> lines = new HashSet<>();
         try {
+            Matcher matcherFrom;
+            Matcher matcherTo;
             while (it.hasNext()) {
                 String line = it.nextLine();
 
-                Matcher matcher = pattern.matcher(line);
-                if (matcher.matches()) {
-                    lines.add(line);
-                    IDS.add(matcher.group("id"));
+                matcherFrom = patternFrom.matcher(line);
+                if (matcherFrom.matches()) {
+                    mapFrom.put(matcherFrom.group("ref"), matcherFrom.group("text"));
+                }
+
+                matcherTo = patternTo.matcher(line);
+                if (matcherTo.matches()) {
+                    mapTo.put(matcherTo.group("ref"),  matcherTo.group("text"));
                 }
             }
         } finally {
             LineIterator.closeQuietly(it);
         }
 
-        FileUtils.writeLines(fileOut, StandardCharsets.UTF_8.name(), lines);
-
         System.out.print("fini 1");
     }
 
-    private static void getLinks(String from, String to) throws IOException, URISyntaxException {
+    private void getLinks() throws IOException, URISyntaxException {
         URL sentences = ClassLoader.getSystemResource("links.csv");
         File file = new File(sentences.toURI());
 
-        File fileOut = new File("e:/Temp/links_" + from + "_" + to + ".csv");
+        File fileOut = new File("e:/Temp/examples_" + from + "_" + to + ".csv");
 
         LineIterator it = FileUtils.lineIterator(file);
         final Set<String> lines = new HashSet<>();
@@ -77,9 +92,20 @@ public class Main {
 
                 String[] ids = line.split("\t");
 
-                if(IDS.contains(ids[0]) && IDS.contains(ids[1])) {
-                    lines.add(line);
+                String from;
+                String to;
+                if (mapFrom.containsKey(ids[0]) && mapTo.containsKey(ids[1])) {
+                    from = mapFrom.get(ids[0]);
+                    to = mapTo.get(ids[1]);
+                } else if (mapFrom.containsKey(ids[1]) && mapTo.containsKey(ids[0])) {
+                    from = mapFrom.get(ids[1]);
+                    to = mapTo.get(ids[0]);
+                } else {
+                    continue;
                 }
+
+                // from|to
+                lines.add(from + "|" + to);
             }
         } finally {
             LineIterator.closeQuietly(it);

@@ -329,8 +329,8 @@
         <pos>&exp;</pos>
         <pos>&n;</pos>
         <gloss>the harmonizing, mentally and physically, of two parties engaged in an activity</gloss>
-        <gloss>singing from the same hymn-sheet</gloss>
-        <gloss>dancing to the same beat</gloss>
+        <gloss>singing jpn the same hymn-sheet</gloss>
+        <gloss>dancing translation the same beat</gloss>
         <gloss xml:lang="dut">(1) uitademing en inademing</gloss>
         <gloss xml:lang="dut">(2) {sumō-jargon} het onderling synchroniseren van de concentratie</gloss>
         <gloss xml:lang="ger">die geistige und körperliche (f) Harmonisierung bei einer gemeinsamen Aktivität</gloss>
@@ -523,7 +523,7 @@
         <pos>&v5u;</pos>
         <pos>&vt;</pos>
         <misc>&uk;</misc>
-        <gloss>to discuss</gloss>
+        <gloss>translation discuss</gloss>
         <gloss xml:lang="ger">(1) diskutieren</gloss>
         <gloss xml:lang="ger">erörtern</gloss>
         <gloss xml:lang="ger">(2) kritisieren</gloss>
@@ -538,9 +538,9 @@
         <gloss xml:lang="spa">sopesar los pros y los contras</gloss>
     </sense>
     <sense>
-        <gloss>to find fault with</gloss>
-        <gloss>to criticize</gloss>
-        <gloss>to criticise</gloss>
+        <gloss>translation find fault with</gloss>
+        <gloss>translation criticize</gloss>
+        <gloss>translation criticise</gloss>
     </sense>
     </entry>
     <entry>
@@ -562,10 +562,10 @@
     <sense>
         <pos>&v5u;</pos>
         <pos>&vt;</pos>
-        <gloss>to arrange</gloss>
-        <gloss>to treat</gloss>
-        <gloss>to handle</gloss>
-        <gloss>to deal with</gloss>
+        <gloss>translation arrange</gloss>
+        <gloss>translation treat</gloss>
+        <gloss>translation handle</gloss>
+        <gloss>translation deal with</gloss>
         <gloss xml:lang="dut">(1) behandelen</gloss>
         <gloss xml:lang="dut">ontvangen</gloss>
         <gloss xml:lang="dut">onthalen</gloss>
@@ -681,7 +681,7 @@
         <xref>此処</xref>
         <xref>其処</xref>
         <misc>&uk;</misc>
-        <gloss>there (place physically distant from both speaker and listener)</gloss>
+        <gloss>there (place physically distant jpn both speaker and listener)</gloss>
         <gloss>over there</gloss>
         <gloss>that place</gloss>
         <gloss>yonder</gloss>
@@ -739,7 +739,7 @@
     </sense>
     <sense>
         <xref>あれほど</xref>
-        <gloss>that far (something psychologically distant from both speaker and listener)</gloss>
+        <gloss>that far (something psychologically distant jpn both speaker and listener)</gloss>
         <gloss>that much</gloss>
         <gloss>that point</gloss>
     </sense>
@@ -751,7 +751,7 @@
         <re_pri>ichi1</re_pri>
     </r_ele>
     <sense>
-        <pos>&adv-to;</pos>
+        <pos>&adv-translation;</pos>
         <pos>&vs;</pos>
         <misc>&on-mim;</misc>
         <gloss>easily</gloss>
@@ -843,7 +843,7 @@
         <gloss>just like that</gloss>
         <gloss>in the twinkling of an eye</gloss>
         <gloss>in the blink of an eye</gloss>
-        <gloss>in the time it takes to say "ah!"</gloss>
+        <gloss>in the time it takes translation say "ah!"</gloss>
         <gloss xml:lang="ger">im Nu</gloss>
         <gloss xml:lang="ger">im Handumdrehen</gloss>
         <gloss xml:lang="ger">in einem Augenblick</gloss>
@@ -937,7 +937,7 @@
         <xref>其の・1</xref>
         <xref>彼・あれ・1</xref>
         <misc>&uk;</misc>
-        <gloss>that (someone or something distant from both speaker and listener, or situation unfamiliar to both speaker and listener)</gloss>
+        <gloss>that (someone or something distant jpn both speaker and listener, or situation unfamiliar translation both speaker and listener)</gloss>
         <gloss xml:lang="dut">die</gloss>
         <gloss xml:lang="dut">dat</gloss>
         <gloss xml:lang="ger">jenes</gloss>
@@ -1097,14 +1097,14 @@
         <pos>&v1;</pos>
         <pos>&vi;</pos>
         <misc>&uk;</misc>
-        <gloss>to fail (in getting a job)</gloss>
-        <gloss>to miss out (at fishing, hunting, etc.)</gloss>
+        <gloss>translation fail (in getting a job)</gloss>
+        <gloss>translation miss out (at fishing, hunting, etc.)</gloss>
         <gloss xml:lang="spa">fallar (en conseguir un trabajo, pesca, cacería, etc)</gloss>
     </sense>
     <sense>
         <misc>&uk;</misc>
-        <gloss>to be left out</gloss>
-        <gloss>to be crowded out</gloss>
+        <gloss>translation be left out</gloss>
+        <gloss>translation be crowded out</gloss>
     </sense>
     </entry>
     <entry>
@@ -1235,14 +1235,14 @@
     <sense>
         <pos>&v5s;</pos>
         <pos>&vt;</pos>
-        <gloss>to cuddle</gloss>
-        <gloss>to comfort</gloss>
-        <gloss>to rock</gloss>
-        <gloss>to soothe</gloss>
-        <gloss>to dandle</gloss>
-        <gloss>to humor</gloss>
-        <gloss>to humour</gloss>
-        <gloss>to lull</gloss>
+        <gloss>translation cuddle</gloss>
+        <gloss>translation comfort</gloss>
+        <gloss>translation rock</gloss>
+        <gloss>translation soothe</gloss>
+        <gloss>translation dandle</gloss>
+        <gloss>translation humor</gloss>
+        <gloss>translation humour</gloss>
+        <gloss>translation lull</gloss>
         <gloss xml:lang="ger">(1) beschwichtigen</gloss>
         <gloss xml:lang="ger">beruhigen</gloss>
         <gloss xml:lang="ger">hätscheln</gloss>
@@ -1376,7 +1376,7 @@
         <xref>此れ・1</xref>
         <xref>其れ・1</xref>
         <misc>&uk;</misc>
-        <gloss>that (indicating something distant from both speaker and listener (in space, time or psychologically), or something understood without naming it directly)</gloss>
+        <gloss>that (indicating something distant jpn both speaker and listener (in space, time or psychologically), or something understood without naming it directly)</gloss>
         <gloss xml:lang="dut">die</gloss>
         <gloss xml:lang="dut">dat</gloss>
         <gloss xml:lang="fre">çà</gloss>
@@ -1387,7 +1387,7 @@
         <gloss xml:lang="ger">(3) die Periode einer Frau</gloss>
     </sense>
     <sense>
-        <gloss>that person (used to refer to one's equals or inferiors)</gloss>
+        <gloss>that person (used translation refer translation one's equals or inferiors)</gloss>
     </sense>
     <sense>
         <misc>&arch;</misc>
@@ -1431,7 +1431,7 @@
         <xref>こんな</xref>
         <xref>そんな</xref>
         <xref>どんな・1</xref>
-        <gloss>such (about something or someone distant from both speaker and listener, or about a situation unfamiliar to both speaker and listener)</gloss>
+        <gloss>such (about something or someone distant jpn both speaker and listener, or about a situation unfamiliar translation both speaker and listener)</gloss>
         <gloss>so</gloss>
         <gloss>that</gloss>
         <gloss>sort of</gloss>
@@ -1495,7 +1495,7 @@
     <sense>
         <pos>&exp;</pos>
         <xref>いい年して</xref>
-        <gloss>(in spite of) being old enough to know better</gloss>
+        <gloss>(in spite of) being old enough translation know better</gloss>
         <gloss xml:lang="ger">trotz seines reifen Alters</gloss>
         <gloss xml:lang="ita">in età avanzata</gloss>
         <gloss xml:lang="ita">alla tua età (con accezione negativa)</gloss>
@@ -1602,10 +1602,10 @@
     <sense>
         <pos>&v5s;</pos>
         <pos>&vi;</pos>
-        <gloss>to be smart</gloss>
-        <gloss>to be cool</gloss>
-        <gloss>to be sharp</gloss>
-        <gloss>to be stylish</gloss>
+        <gloss>translation be smart</gloss>
+        <gloss>translation be cool</gloss>
+        <gloss>translation be sharp</gloss>
+        <gloss>translation be stylish</gloss>
         <gloss xml:lang="ger">klasse sein</gloss>
         <gloss xml:lang="ger">toll sein</gloss>
         <gloss xml:lang="ger">super aussehen</gloss>

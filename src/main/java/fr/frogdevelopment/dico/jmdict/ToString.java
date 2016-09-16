@@ -15,6 +15,7 @@ public class ToString {
 
             String language = "fre";
             Parser parser = new Parser(language);
+            // fixme fetch directly form URL (see sentences files)
             URL dir_url = ClassLoader.getSystemResource("JMdict");
             File file = new File(dir_url.toURI());
 

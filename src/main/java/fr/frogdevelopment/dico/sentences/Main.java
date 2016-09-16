@@ -9,7 +9,6 @@ import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URISyntaxException;
 import java.net.URL;
@@ -54,17 +53,20 @@ public class Main {
     }
 
     private void execute() throws IOException, URISyntaxException {
-        long start = System.currentTimeMillis();
+        long start;
 
         // links between JMDict & Tatoeba sentences
+        start = System.currentTimeMillis();
         step1();
         System.out.println(" in " + (System.currentTimeMillis() - start) + "ms");
 
         // tatoeba sentences
+        start = System.currentTimeMillis();
         step2();
         System.out.println(" in " + (System.currentTimeMillis() - start) + "ms");
 
         // links between tatoeba sentences
+        start = System.currentTimeMillis();
         step3();
         System.out.println(" in " + (System.currentTimeMillis() - start) + "ms");
 
@@ -83,7 +85,7 @@ public class Main {
         // cf http://www.edrdg.org/wiki/index.php/Sentence-Dictionary_Linking
         // order :JMDict_word(reading)[sense_number]{form_in_sentence}~
 
-        System.out.print("step 1");
+        System.out.print("step 1 : " + mapIndices.size() + " indices");
     }
 
     private void step2() throws IOException, URISyntaxException {
@@ -109,7 +111,7 @@ public class Main {
             }
         });
 
-        System.out.print("step 2");
+        System.out.print("step 2 : " + mapJapanese.size() + " japanese sentences and " + mapTranslation.size() + " translated sentences");
     }
 
     private void step3() throws IOException, URISyntaxException {
@@ -141,12 +143,14 @@ public class Main {
             lines.add(japaneseId + "\t" + translationId + "\t" + japaneseSentence + "\t" + translationSentence + "\t" + indices);
         });
 
-        System.out.print("step 3");
+        System.out.print("step 3 : " + lines.size() + " lines");
     }
 
     private void write() throws IOException {
-        File fileOut = new File("e:/Temp/examples_" + jpn + "_" + translation + ".csv");
+        String pathname = "d:/Temp/examples_" + jpn + "_" + translation + ".csv";
+        File fileOut = new File(pathname);
         FileUtils.writeLines(fileOut, lines);
+        System.out.println("File saved : " + pathname);
     }
 
     // read directly from tatoeba.org => always last version
@@ -155,8 +159,7 @@ public class Main {
         // cf http://stackoverflow.com/a/28029231/244911
         try (
                 // 1st InputStream from your compressed file
-                InputStream inputStream = new URL(url).openStream();
-                BufferedInputStream in = new BufferedInputStream(inputStream);
+                BufferedInputStream in = new BufferedInputStream(new URL(url).openStream());
                 // wrap in a 2nd InputStream that deals with compression
                 BZip2CompressorInputStream bzIn = new BZip2CompressorInputStream(in);
                 // wrap in a 3rd InputStream that deals with tar
@@ -171,7 +174,7 @@ public class Main {
 
                 // cf http://stackoverflow.com/a/25749756/244911
                 br = new BufferedReader(new InputStreamReader(tarIn)); // Read directly from tarInput
-                System.out.println("For File = " + entry.getName());
+                System.out.println("\tFile name : " + entry.getName());
                 String line;
                 while ((line = br.readLine()) != null) {
                     consumer.accept(line);

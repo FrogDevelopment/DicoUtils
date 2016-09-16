@@ -152,13 +152,15 @@ public class Main {
     // read directly from tatoeba.org => always last version
     private static void read(String url, Consumer<String> consumer) throws IOException, URISyntaxException {
         System.out.println("reading " + url);
-        try (// 1st InputStream from your compressed file
-             InputStream inputStream = new URL(url).openStream();
-             BufferedInputStream in = new BufferedInputStream(inputStream);
-             // wrap in a 2nd InputStream that deals with compression
-             BZip2CompressorInputStream bzIn = new BZip2CompressorInputStream(in);
-             // wrap in a 3rd InputStream that deals with tar
-             TarArchiveInputStream tarIn = new TarArchiveInputStream(bzIn)) {
+        // cf http://stackoverflow.com/a/28029231/244911
+        try (
+                // 1st InputStream from your compressed file
+                InputStream inputStream = new URL(url).openStream();
+                BufferedInputStream in = new BufferedInputStream(inputStream);
+                // wrap in a 2nd InputStream that deals with compression
+                BZip2CompressorInputStream bzIn = new BZip2CompressorInputStream(in);
+                // wrap in a 3rd InputStream that deals with tar
+                TarArchiveInputStream tarIn = new TarArchiveInputStream(bzIn)) {
 
             ArchiveEntry entry;
             BufferedReader br;
@@ -167,7 +169,7 @@ public class Main {
                     continue;
                 }
 
-                // http://stackoverflow.com/a/25749756/244911
+                // cf http://stackoverflow.com/a/25749756/244911
                 br = new BufferedReader(new InputStreamReader(tarIn)); // Read directly from tarInput
                 System.out.println("For File = " + entry.getName());
                 String line;

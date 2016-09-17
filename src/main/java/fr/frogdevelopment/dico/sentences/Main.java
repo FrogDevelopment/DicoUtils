@@ -4,6 +4,7 @@ import org.apache.commons.compress.archivers.ArchiveEntry;
 import org.apache.commons.compress.archivers.tar.TarArchiveInputStream;
 import org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -78,7 +79,12 @@ public class Main {
         read("http://downloads.tatoeba.org/exports/jpn_indices.tar.bz2", line -> {
             Matcher matcher = PATTERN_INDICES.matcher(line);
             if (matcher.matches()) {
-                mapIndices.put(matcher.group("jap"), matcher.group("text"));
+                String text = matcher.group("text");
+                if (StringUtils.isBlank(text)) {
+                    // exits empty indices ??
+                    return;
+                }
+                mapIndices.put(matcher.group("jap"), text);
             }
         });
 

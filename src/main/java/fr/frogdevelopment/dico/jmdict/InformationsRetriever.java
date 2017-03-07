@@ -31,7 +31,13 @@ public class InformationsRetriever {
 
             String line;
             Matcher matcher;
+            int nbEntries = 0;
             while ((line = br.readLine()) != null) {
+
+                if (line.equals("</entry>")) {
+                    nbEntries++;
+                }
+
                 matcher = GLOSS_PATTERN.matcher(line);
                 if (matcher.matches()) {
                     String lang = matcher.group("lang");
@@ -48,7 +54,7 @@ public class InformationsRetriever {
                     .sorted(Comparator.comparing(Map.Entry::getValue))
                     .forEach(e -> System.out.println("lang : " + e.getKey() + " = " + e.getValue()));
 
-            System.out.println("merge in " + (System.currentTimeMillis() - start) + "ms");
+            System.out.println(System.lineSeparator() + "=> " + nbEntries + " entries merge in " + (System.currentTimeMillis() - start) + "ms");
         }
     }
 }

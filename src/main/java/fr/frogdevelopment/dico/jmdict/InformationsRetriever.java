@@ -17,7 +17,7 @@ import java.util.regex.Pattern;
 public class InformationsRetriever {
 
     private static final String URL = "ftp://ftp.monash.edu.au/pub/nihongo/JMdict.gz";
-
+    private static final Pattern CREATED_PATTERN = Pattern.compile("^<!-- JMdict created: (?<date>.*) -->$");
     private static final Pattern GLOSS_PATTERN = Pattern.compile("^<gloss( xml:lang=\"(?<lang>\\w{3})\")?>(?<value>.*)(.*)</gloss>$");
 
     private static final Map<String, Integer> countByLang = new HashMap<>();
@@ -32,7 +32,15 @@ public class InformationsRetriever {
             String line;
             Matcher matcher;
             int nbEntries = 0;
+            String dateCreated = null;
             while ((line = br.readLine()) != null) {
+
+                if (dateCreated == null) {
+                    matcher = CREATED_PATTERN.matcher(line);
+                    if (matcher.matches()) {
+                        dateCreated = matcher.group("date");
+                    }
+                }
 
                 if (line.equals("</entry>")) {
                     nbEntries++;
@@ -49,12 +57,15 @@ public class InformationsRetriever {
                 }
             }
 
+            System.out.println("JMDict info :");
+            System.out.println("- date = " + dateCreated);
+            System.out.println("- nb entries = " + nbEntries);
+            System.out.println("- nb language = " + countByLang.size());
+            System.out.println("- nb entries / language :");
             countByLang.entrySet()
                     .stream()
                     .sorted(Comparator.comparing(Map.Entry::getValue))
-                    .forEach(e -> System.out.println("lang : " + e.getKey() + " = " + e.getValue()));
-
-            System.out.println(System.lineSeparator() + "=> " + nbEntries + " entries merge in " + (System.currentTimeMillis() - start) + "ms");
+                    .forEach(e -> System.out.println("\t* " + e.getKey() + " = " + e.getValue()));
         }
     }
 }

@@ -1,20 +1,27 @@
 package fr.frogdevelopment.dico.jmdict;
 
 import org.apache.commons.compress.compressors.gzip.GzipCompressorInputStream;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-public class Parser_V2 {
+class JMDictFetcher {
 
     private static final String URL = "ftp://ftp.monash.edu.au/pub/nihongo/JMdict.gz";
 
@@ -23,6 +30,7 @@ public class Parser_V2 {
 
     private static final String ENTRY_START = "<entry>";
     private static final String ENTRY_END = "</entry>";
+    private static final Pattern SEQ_PATTERN = Pattern.compile("^<ent_seq>(?<seq>\\d+)</ent_seq>$");
 
     private static final String KANJI_ELEMENT_START = "<k_ele>";
     private static final String KANJI_ELEMENT_END = "</k_ele>";
@@ -36,7 +44,6 @@ public class Parser_V2 {
     private static final String SENSE_START = "<sense>";
     private static final String SENSE_END = "</sense>";
 
-    private static final Pattern CREATED_PATTERN = Pattern.compile("^<!-- JMdict created: (?<date>.*) -->$");
     private static final Pattern POS_PATTERN = Pattern.compile("^<pos>&(?<pos>.*);</pos>$");
     private static final Pattern XREF_PATTERN = Pattern.compile("^<xref>(?<reading>.*)</xref>$");
     private static final Pattern ANT_PATTERN = Pattern.compile("^<ant>(?<reading>.*)</ant>$");
@@ -47,26 +54,13 @@ public class Parser_V2 {
 
     private static final Pattern GLOSS_PATTERN = Pattern.compile("^<gloss( xml:lang=\"(?<lang>\\w{3})\")?>(?<value>.*)(.*)</gloss>$");
 
-    final List<Entry> ENTRIES = new ArrayList<>();
-    String dateCreated;
-
-    private final String language;
-    private final boolean isDefaultLanguage;
-
-    public Parser_V2(String language) {
-        if (StringUtils.isBlank(language)) {
-            this.language = "eng";
-            isDefaultLanguage = true;
-        } else {
-            this.language = language;
-            isDefaultLanguage = "eng".equalsIgnoreCase(language);
-        }
-    }
+    private final List<Entry> entries = new ArrayList<>();
 
     private boolean readJmDict = false;
     private Entry currentEntry = null;
     private Sense currentSense = null;
 
+    private boolean readEntry = false;
     private boolean readKanji = false;
     private boolean readElement = false;
     private boolean readSense = false;
@@ -93,15 +87,17 @@ public class Parser_V2 {
                         case ENTRY_END:
                             // do not add entry if empty senses (filtered by language)
                             if (!currentEntry.senses.isEmpty()) {
-                                ENTRIES.add(currentEntry);
+                                entries.add(currentEntry);
                             }
                             continue;
 
                         case ENTRY_START:
                             currentEntry = new Entry();
+                            readEntry = true;
                             continue;
 
                         case KANJI_ELEMENT_START:
+                            readEntry = false;
                             readKanji = true;
                             continue;
 
@@ -110,6 +106,7 @@ public class Parser_V2 {
                             continue;
 
                         case READING_ELEMENT_START:
+                            readEntry = false;
                             readElement = true;
                             continue;
 
@@ -124,10 +121,7 @@ public class Parser_V2 {
 
                         case SENSE_END:
                             readSense = false;
-                            // do not add sense if empty gloss (filtered by language)
-                            if (!currentSense.gloss.isEmpty()) {
-                                currentEntry.senses.add(currentSense);
-                            }
+                            currentEntry.senses.add(currentSense);
                             continue;
 
                         default:
@@ -136,7 +130,9 @@ public class Parser_V2 {
                     }
                 }
 
-                if (readKanji) {
+                if (readEntry) {
+                    readEntry(line);
+                } else if (readKanji) {
                     readKanji(line);
                 } else if (readElement) {
                     readElement(line);
@@ -145,16 +141,20 @@ public class Parser_V2 {
 
                 } else if (JMDICT_START.equals(line)) {
                     readJmDict = true;
-                } else {
-                    Matcher matcher = CREATED_PATTERN.matcher(line);
-                    if (matcher.matches()) {
-                        dateCreated = matcher.group("date");
-                    }
                 }
             }
             System.out.println("nb lines : " + n);
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    private void readEntry(String line) {
+        Matcher matcher = SEQ_PATTERN.matcher(line);
+        if (matcher.matches()) {
+            currentEntry.seq = matcher.group("seq");
+        } else {
+            throw new IllegalStateException("No entry_seq found in line : " + line);
         }
     }
 
@@ -179,53 +179,73 @@ public class Parser_V2 {
         matcher = XREF_PATTERN.matcher(line);
         if (matcher.matches()) {
             // toLine manage cross-reference
-            return ;
+            return;
         }
 
         matcher = ANT_PATTERN.matcher(line);
         if (matcher.matches()) {
             // toLine manage antonym
-            return ;
+            return;
         }
 
         matcher = POS_PATTERN.matcher(line);
         if (matcher.matches()) {
             currentSense.pos.add(matcher.group("pos"));
-            return ;
+            return;
         }
 
         matcher = FIELD_PATTERN.matcher(line);
         if (matcher.matches()) {
             currentSense.field.add(matcher.group("field"));
-            return ;
+            return;
         }
 
         matcher = MISC_PATTERN.matcher(line);
         if (matcher.matches()) {
             currentSense.misc.add(matcher.group("misc"));
-            return ;
+            return;
         }
 
         matcher = INFO_PATTERN.matcher(line);
         if (matcher.matches()) {
             currentSense.info = matcher.group("info");
-            return ;
+            return;
         }
 
         matcher = DIAL_PATTERN.matcher(line);
         if (matcher.matches()) {
             currentSense.dial.add(matcher.group("dial"));
-            return ;
+            return;
         }
 
         matcher = GLOSS_PATTERN.matcher(line);
         if (matcher.matches()) {
             String lang = matcher.group("lang");
-            // by default eng language country is absent
-            if ((isDefaultLanguage && lang == null) || language.equalsIgnoreCase(lang)) {
-                currentSense.gloss.add(matcher.group("value"));
+            if (StringUtils.isBlank(lang)) {
+                lang = "eng";
             }
+
+            langs.add(lang);
+
+            if (!currentSense.glossByLang.containsKey(lang)) {
+                currentSense.glossByLang.put(lang, new HashSet<>());
+            }
+            currentSense.glossByLang.get(lang).add(matcher.group("value"));
         }
+    }
+
+    private final Set<String> langs = new HashSet<>();
+
+    void write(String directoryPathName) throws IOException {
+        for (String lang : langs) {
+            File fileOut = Paths.get(directoryPathName, "entries_" + lang + ".txt").toFile();
+            List<String> filteredEntries = entries.stream()
+                                                 .filter(e -> e.containsLang(lang))
+                                                 .map(e->e.toString(lang))
+                                                 .collect(Collectors.toList());
+            FileUtils.writeLines(fileOut, StandardCharsets.UTF_8.name(), filteredEntries, false);
+        }
+
     }
 
 }

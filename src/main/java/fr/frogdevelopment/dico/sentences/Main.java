@@ -23,11 +23,12 @@ import java.util.regex.Pattern;
 
 public class Main {
 
+
     public static void main(String[] args) {
-        String to = "fra";
+
 
         try {
-            new Main(to).execute();
+            new Main().execute();
 
             System.exit(0);
         } catch (Exception e) {
@@ -37,20 +38,26 @@ public class Main {
     }
 
 
+    private static final String[] LANGS = {"dut", "eng", "fra", "ger", "hun", "ita", "rus", "spa", "swe", "slv"};
     private static final Pattern PATTERN_INDICES = Pattern.compile("(?<jap>\\d+)\\t(?<eng>\\d+)\\t(?<text>.*)");
+    private static final String PATTERN_TATOEBA = "(?<ref>\\d+)\t(?<language>%s)\t(?<text>.*)";
 
-    private Set<String> lines = new HashSet<>();
+    private static final Pattern PATTERN_JAPANESE = Pattern.compile(String.format(PATTERN_TATOEBA, "jpn"));
+    private final Map<String, Pattern> patterns = new HashMap<>();
 
+    private Map<String, Set<String>> linesByLang = new HashMap<>();
 
     private final Map<String, String> mapIndices = new HashMap<>();
     private final Map<String, String> mapJapanese = new HashMap<>();
-    private final Map<String, String> mapTranslation = new HashMap<>();
+    private final Map<String, Map<String, String>> translationByLang = new HashMap<>();
 
-    private final String jpn = "jpn";
-    private final String translation;
 
-    private Main(String translation) {
-        this.translation = translation.toLowerCase();
+    private Main() {
+        for (String lang : LANGS) {
+            patterns.put(lang, Pattern.compile(String.format(PATTERN_TATOEBA, lang)));
+            linesByLang.put(lang, new HashSet<>());
+            translationByLang.put(lang, new HashMap<>());
+        }
     }
 
     private void execute() throws IOException, URISyntaxException {
@@ -95,35 +102,34 @@ public class Main {
     }
 
     private void step2() throws IOException, URISyntaxException {
-        String regex = "(?<ref>\\d+)\t(?<language>%s)\t(?<text>.*)";
-        Pattern patternJapanese = Pattern.compile(String.format(regex, jpn));
-        Pattern patternTranslation = Pattern.compile(String.format(regex, translation));
 
         read("http://downloads.tatoeba.org/exports/sentences.tar.bz2", line -> {
             // is japanese sentence ?
-            Matcher matcherJapanese = patternJapanese.matcher(line);
-            if (matcherJapanese.matches()) {
-                String ref = matcherJapanese.group("ref");
+            Matcher matcher = PATTERN_JAPANESE.matcher(line);
+            if (matcher.matches()) {
+                String ref = matcher.group("ref");
                 // take sentence only if presents in jpn_indices.csv
                 if (mapIndices.containsKey(ref)) {
-                    mapJapanese.put(ref, matcherJapanese.group("text"));
+                    mapJapanese.put(ref, matcher.group("text"));
                 }
-            }
-
-            // is wanted language sentence ?
-            Matcher matcherTranslation = patternTranslation.matcher(line);
-            if (matcherTranslation.matches()) {
-                mapTranslation.put(matcherTranslation.group("ref"), matcherTranslation.group("text"));
+            } else {
+                for (Map.Entry<String, Pattern> entry : patterns.entrySet()) {
+                    matcher = entry.getValue().matcher(line);
+                    if (matcher.matches()) {
+                        translationByLang.get(entry.getKey()).put(matcher.group("ref"), matcher.group("text"));
+                    }
+                }
             }
         });
 
-        System.out.print("step 2 : " + mapJapanese.size() + " japanese sentences and " + mapTranslation.size() + " translated sentences");
+        System.out.println("step 2 : translated sentences by lang");
+        System.out.println(" \tjpn : " + mapJapanese.size());
+        translationByLang.forEach((k, v) -> System.out.println("\t" + k + " : " + v.size()));
     }
 
     private void step3() throws IOException, URISyntaxException {
         read("http://downloads.tatoeba.org/exports/links.tar.bz2", line -> {
             String[] ids = line.split("\t");
-
             String japaneseSentence;
             String translationSentence;
             String indices;
@@ -131,32 +137,41 @@ public class Main {
             String id_right = ids[1];
             String japaneseId;
             String translationId;
-            if (mapIndices.containsKey(id_left) && mapJapanese.containsKey(id_left) && mapTranslation.containsKey(id_right)) {
-                japaneseId = id_left;
-                translationId = id_right;
-            } else if (mapIndices.containsKey(id_right) && mapJapanese.containsKey(id_right) && mapTranslation.containsKey(id_left)) {
-                japaneseId = id_right;
-                translationId = id_left;
-            } else {
-                return;
+
+            for (Map.Entry<String, Map<String, String>> entry : translationByLang.entrySet()) {
+                String lang = entry.getKey();
+                Map<String, String> mapLang = entry.getValue();
+
+                if (mapIndices.containsKey(id_left) && mapJapanese.containsKey(id_left) && mapLang.containsKey(id_right)) {
+                    japaneseId = id_left;
+                    translationId = id_right;
+                } else if (mapIndices.containsKey(id_right) && mapJapanese.containsKey(id_right) && mapLang.containsKey(id_left)) {
+                    japaneseId = id_right;
+                    translationId = id_left;
+                } else {
+                    continue;
+                }
+
+                japaneseSentence = mapJapanese.get(japaneseId);
+                indices = mapIndices.get(japaneseId);
+                translationSentence = mapLang.get(translationId);
+
+                // line format : Jpn_seq_no[TAB]Eng_seq_no[TAB]Japanese sentence[TAB]English sentence[TAB]Indices
+                linesByLang.get(lang).add(japaneseId + "\t" + translationId + "\t" + japaneseSentence + "\t" + translationSentence + "\t" + indices);
             }
-
-            japaneseSentence = mapJapanese.get(japaneseId);
-            indices = mapIndices.get(japaneseId);
-            translationSentence = mapTranslation.get(translationId);
-
-            // line format : Jpn_seq_no[TAB]Eng_seq_no[TAB]Japanese sentence[TAB]English sentence[TAB]Indices
-            lines.add(japaneseId + "\t" + translationId + "\t" + japaneseSentence + "\t" + translationSentence + "\t" + indices);
         });
 
-        System.out.print("step 3 : " + lines.size() + " lines");
+        System.out.println("step 3 : lines by lang");
+        linesByLang.forEach((k, v) -> System.out.println("\t-" + k + " : " + v.size()));
     }
 
     private void write() throws IOException {
-        String pathname = "d:/Temp/examples_" + jpn + "_" + translation + ".csv";
-        File fileOut = new File(pathname);
-        FileUtils.writeLines(fileOut, lines);
-        System.out.println("File saved : " + pathname);
+        for (String lang : LANGS) {
+            String pathname = "d:/Temp/examples_jpn_" + lang + ".csv";
+            File fileOut = new File(pathname);
+            FileUtils.writeLines(fileOut, linesByLang.get(lang));
+            System.out.println("File saved : " + pathname);
+        }
     }
 
     // read directly from tatoeba.org => always last version
